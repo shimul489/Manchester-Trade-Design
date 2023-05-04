@@ -275,11 +275,6 @@ i.bx {
   height: 52px;
 }
 
-@media screen and (min-width: 1400px) {
-  .container {
-    max-width: 1700px;
-  }
-}
 /*================================================
  Header-section
 =================================================*/
@@ -297,24 +292,17 @@ i.bx {
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
   .main-cover header.header-area {
-    padding: 0px 20px;
+    padding: 40px 0px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .main-cover header.header-area {
-    padding: 0px 10px;
+    padding: 40px 0px;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 576px) {
   .main-cover header.header-area {
-    padding: 0px 10px;
-    top: 0;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-cover header.header-area {
-    padding: 0px 0px;
-    top: 0;
+    padding: 15px 10px;
   }
 }
 .main-cover header.header-area .nav-right .header-icons {
@@ -340,6 +328,11 @@ i.bx {
     padding: 15px 0px;
   }
 }
+@media (max-width: 350px) {
+  .main-cover header.header-area .header-logo {
+    max-width: 125px;
+  }
+}
 .main-cover header.header-area .header-logo img {
   min-width: 120px;
   max-width: 100%;
@@ -351,7 +344,7 @@ i.bx {
 }
 @media (max-width: 576px) {
   .main-cover header.header-area .header-logo img {
-    max-width: 100%;
+    max-width: 80%;
   }
 }
 .main-cover header.header-area .header-btn {
@@ -654,8 +647,20 @@ i.bx {
     align-items: center;
     position: absolute;
     right: 41px;
-    top: 110px;
+    top: 166px;
   }
+}
+@media only screen and (max-width: 991px) and (min-width: 576px) and (max-width: 768px) {
+  .main-cover header.header-area .mobile-menu-btn {
+    top: 158px;
+  }
+}
+@media only screen and (max-width: 991px) and (max-width: 576px) {
+  .main-cover header.header-area .mobile-menu-btn {
+    top: 143px;
+  }
+}
+@media only screen and (max-width: 991px) {
   .main-cover header.header-area .cross-btn {
     display: inline-block !important;
     position: relative;
@@ -685,6 +690,8 @@ i.bx {
     bottom: 0;
     width: 100%;
   }
+}
+@media only screen and (max-width: 991px) {
   .main-cover header.header-area .cross-btn.h-active span.cross-top {
     transform: rotate(45deg);
     top: 50%;
@@ -724,6 +731,29 @@ i.bx {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline .hotline-icon i {
+    font-size: 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .main-cover header.header-area .hotline .hotline-icon {
+    margin: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline .hotline-icon {
+    margin: 5px;
+    height: 56px;
+    width: 56px;
+  }
+}
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline .hotline-icon {
+    height: 36px;
+    width: 36px;
+  }
+}
 .main-cover header.header-area .hotline .hotline-info {
   padding: 0px 65px 0px 0px;
 }
@@ -734,14 +764,14 @@ i.bx {
   display: inline-block;
   padding-bottom: 2px;
 }
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-cover header.header-area .hotline .hotline-info span {
-    font-size: 14px;
-  }
-}
 @media (max-width: 576px) {
   .main-cover header.header-area .hotline .hotline-info span {
-    font-size: 14px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 350px) {
+  .main-cover header.header-area .hotline .hotline-info span {
+    font-size: 11px;
   }
 }
 .main-cover header.header-area .hotline .hotline-info h6 {
@@ -763,14 +793,34 @@ i.bx {
     font-size: 22px;
   }
 }
+@media (max-width: 376px) {
+  .main-cover header.header-area .hotline .hotline-info h6 a {
+    font-size: 15px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover header.header-area .hotline .hotline-info {
+    padding: 0px 30px 0px 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
   .main-cover header.header-area .hotline .hotline-info {
     padding: 0px 30px 0px 0px;
   }
 }
 @media (max-width: 576px) {
   .main-cover header.header-area .hotline .hotline-info {
-    padding: 0px 30px 0px 0px;
+    padding: 0px 20px 0px 0px;
+  }
+}
+@media (max-width: 376px) {
+  .main-cover header.header-area .hotline .hotline-info {
+    padding: 0px 5px 0px 0px;
+  }
+}
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline {
+    padding: 8px;
   }
 }
 .main-cover .select-wapper {
@@ -809,12 +859,18 @@ i.bx {
   line-height: 23px;
   color: #0073EC;
 }
-.main-cover .main .section-title p {
+.main-cover .main .section-title h4 {
   font-family: var(--font-gilroy500);
   font-size: 25px;
   line-height: 29px;
   color: rgba(25, 32, 43, 0.7);
-  max-width: 835px;
+}
+.main-cover .main .section-title p {
+  font-family: var(--font-gilroy500);
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(25, 32, 43, 0.7);
+  max-width: 805px;
 }
 .main-cover .main .main-img {
   position: relative;
@@ -829,7 +885,7 @@ i.bx {
   position: relative;
 }
 .service-section .service-content .service-inner {
-  max-width: 50%;
+  max-width: 40%;
 }
 .service-section .service-content .service-img {
   position: absolute;
