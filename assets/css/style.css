@@ -134,6 +134,34 @@ i.bx {
 /*================================================
 2. Mixins Css
 =================================================*/
+.pt-150 {
+  padding-top: 150px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pt-150 {
+    padding-top: 120px;
+  }
+}
+@media (max-width: 991px) {
+  .pt-150 {
+    padding-top: 90px;
+  }
+}
+
+.pb-150 {
+  padding-bottom: 150px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pb-150 {
+    padding-bottom: 120px;
+  }
+}
+@media (max-width: 991px) {
+  .pb-150 {
+    padding-bottom: 90px;
+  }
+}
+
 .pt-120 {
   padding-top: 120px;
 }
@@ -238,7 +266,11 @@ i.bx {
   font-size: 18px;
   color: rgba(25, 32, 43, 0.6);
   line-height: 24px;
-  margin-bottom: 18px;
+  padding-top: 20px;
+  margin-bottom: 0;
+}
+.para p:first-child {
+  padding-top: 0;
 }
 
 .section-title h2 {
@@ -247,6 +279,17 @@ i.bx {
   line-height: 80px;
   color: var(--title-color1);
   text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-title h2 {
+    font-size: 41px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .section-title h2 {
+    font-size: 42px;
+  }
 }
 .section-title h2 span {
   color: var(--primary-color1);
@@ -275,6 +318,11 @@ i.bx {
   height: 52px;
 }
 
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1700px;
+  }
+}
 /*================================================
  Header-section
 =================================================*/
@@ -326,11 +374,6 @@ i.bx {
 @media (max-width: 991px) {
   .main-cover header.header-area .header-logo {
     padding: 15px 0px;
-  }
-}
-@media (max-width: 350px) {
-  .main-cover header.header-area .header-logo {
-    max-width: 125px;
   }
 }
 .main-cover header.header-area .header-logo img {
@@ -660,6 +703,11 @@ i.bx {
     top: 143px;
   }
 }
+@media only screen and (max-width: 991px) and (max-width: 480px) {
+  .main-cover header.header-area .mobile-menu-btn {
+    top: 132px;
+  }
+}
 @media only screen and (max-width: 991px) {
   .main-cover header.header-area .cross-btn {
     display: inline-block !important;
@@ -829,6 +877,12 @@ i.bx {
   border-radius: 25px;
   padding: 42px 25px;
 }
+@media (max-width: 576px) {
+  .main-cover .select-wapper {
+    padding: 25px 15px;
+    margin-top: 30px;
+  }
+}
 .main-cover .select-wapper h3 {
   font-family: var(--font-gilroy700);
   font-size: 30px;
@@ -837,7 +891,7 @@ i.bx {
   margin-bottom: 15px;
 }
 .main-cover .main {
-  padding-top: 48px;
+  padding-top: 65px;
   padding-bottom: 30px;
   overflow: hidden;
 }
@@ -845,7 +899,8 @@ i.bx {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  padding-bottom: 30px;
 }
 .main-cover .main .title-child h6 {
   font-family: var(--font-gilroy500);
@@ -859,18 +914,24 @@ i.bx {
   line-height: 23px;
   color: #0073EC;
 }
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main-cover .main .title-child h6 {
+    font-size: 16px;
+  }
+}
 .main-cover .main .section-title h4 {
   font-family: var(--font-gilroy500);
   font-size: 25px;
   line-height: 29px;
   color: rgba(25, 32, 43, 0.7);
+  padding-bottom: 30px;
 }
 .main-cover .main .section-title p {
   font-family: var(--font-gilroy500);
   font-size: 20px;
   line-height: 23px;
   color: rgba(25, 32, 43, 0.7);
-  max-width: 805px;
+  max-width: 803px;
 }
 .main-cover .main .main-img {
   position: relative;
@@ -881,6 +942,9 @@ i.bx {
   left: -75px;
 }
 
+.service-section {
+  padding-top: 223px;
+}
 .service-section .service-content {
   position: relative;
 }
@@ -896,7 +960,8 @@ i.bx {
   background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
   box-shadow: 0px 50px 80px rgba(0, 115, 236, 0.08);
   border-radius: 35px;
-  padding: 45px 35px;
+  padding: 47px 38px;
+  margin-top: 35px;
 }
 .service-section .service-content .contact .contact-inner {
   max-width: 50%;
@@ -923,19 +988,22 @@ i.bx {
 5. why choose us
 =================================================*/
 .why-choose-us-section {
+  margin-top: 206px;
+}
+.why-choose-us-section .why-choose-us {
   background: rgba(0, 115, 236, 0.02);
   border-radius: 100px;
 }
-.why-choose-us-section .accordion-wrapper {
+.why-choose-us-section .why-choose-us .accordion-wrapper {
   background: #FFFFFF;
   box-shadow: 0px 12px 60px rgba(0, 115, 236, 0.1);
   border-radius: 77px;
   margin: 0 15px;
 }
-.why-choose-us-section .accordion-wrapper .genarel-qustions-area {
+.why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area {
   padding: 25px;
 }
-.why-choose-us-section .accordion-wrapper .genarel-qustions-area p {
+.why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area p {
   font-family: var(--font-gilroy500);
   font-size: 27px;
   line-height: 34px;
@@ -946,17 +1014,17 @@ i.bx {
   border-radius: 57px;
   margin: 0;
 }
-.why-choose-us-section .accordion-wrapper .accordion {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
   padding: 80px;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item {
   margin-bottom: 15px;
   background: #FFFFFF;
   box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
   border-radius: 20px;
   border: none;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button {
   padding: 12px 15px;
   font-family: var(--font-gilroy600);
   font-size: 20px;
@@ -964,18 +1032,18 @@ i.bx {
   box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
   border-radius: 20px;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button:focus {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button:focus {
   box-shadow: none;
   background-color: #fff;
   color: #000;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-header .faq-icon {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .faq-icon {
   margin-right: 20px;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-body {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body {
   padding-top: 0;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-body p {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p {
   font-family: var(--font-gilroy500);
   font-size: 17px;
   line-height: 20px;
@@ -983,24 +1051,24 @@ i.bx {
   padding: 0 10px 16px 68px;
   margin: 0;
 }
-.why-choose-us-section .accordion-wrapper .accordion .accordion-item .accordion-body p span {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p span {
   color: #19202B;
 }
-.why-choose-us-section .why-chooce-us-bottom {
+.why-choose-us-section .why-choose-us .why-chooce-us-bottom {
   padding: 40px 0;
 }
-.why-choose-us-section .why-chooce-us-bottom h3 {
+.why-choose-us-section .why-choose-us .why-chooce-us-bottom h3 {
   font-family: var(--font-gilroy600);
   font-size: 35px;
   color: #000;
   text-transform: capitalize;
   margin-bottom: 17px;
 }
-.why-choose-us-section .why-chooce-us-bottom span {
+.why-choose-us-section .why-choose-us .why-chooce-us-bottom span {
   background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
   box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
   border-radius: 37px;
-  padding: 10px 60px;
+  padding: 20px 83px;
   display: inline-block;
   font-family: var(--font-gilroy600);
   font-size: 25px;
@@ -1022,7 +1090,7 @@ i.bx {
   border-radius: 100px;
 }
 .h1-testimonial-area .h1-testimonial-slider .testimonial-wrap .testimonial-content {
-  padding: 30px 40px;
+  padding: 86px 101px;
   margin-bottom: 55px;
   z-index: 9;
   transition: 0.35s;
@@ -1040,10 +1108,11 @@ i.bx {
   line-height: 47px;
   text-align: center;
   color: #000000;
+  max-width: 798px;
 }
 .h1-testimonial-area .slider-btn {
-  height: 35px;
-  width: 35px;
+  height: 67px;
+  width: 67px;
   line-height: 35px;
   background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
   box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
@@ -1063,6 +1132,7 @@ i.bx {
 =======================================*/
 .expertice-section {
   background-color: #FAFCFF;
+  padding-top: 95px;
 }
 .expertice-section .expertice-img {
   position: relative;
