@@ -281,9 +281,22 @@ i.bx {
   text-transform: capitalize;
   margin-bottom: 20px;
 }
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .section-title h2 {
+    font-size: 58px;
+    line-height: 68px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .section-title h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .section-title h2 {
     font-size: 41px;
+    line-height: 51px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -895,51 +908,137 @@ i.bx {
   padding-bottom: 30px;
   overflow: hidden;
 }
-.main-cover .main .title-child {
+@media (max-width: 991px) {
+  .main-cover .main .od-2 {
+    order: 2;
+  }
+}
+.main-cover .main .od-2 .title-child {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 30px;
   padding-bottom: 30px;
 }
-.main-cover .main .title-child h6 {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-2 .title-child {
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+}
+.main-cover .main .od-2 .title-child h6 {
   font-family: var(--font-gilroy500);
   font-size: 20px;
   line-height: 23px;
   color: #000;
 }
-.main-cover .main .title-child h6 span {
+.main-cover .main .od-2 .title-child h6 span {
   font-family: var(--font-gilroy700);
   font-size: 20px;
   line-height: 23px;
   color: #0073EC;
 }
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .main-cover .main .title-child h6 {
-    font-size: 16px;
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-2 .title-child h6 span {
+    font-size: 17px;
+    line-height: 20px;
   }
 }
-.main-cover .main .section-title h4 {
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .main-cover .main .od-2 .title-child h6 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main-cover .main .od-2 .title-child h6 {
+    font-size: 15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-2 .title-child h6 {
+    font-size: 14px;
+  }
+}
+.main-cover .main .od-2 .section-title h4 {
   font-family: var(--font-gilroy500);
   font-size: 25px;
   line-height: 29px;
   color: rgba(25, 32, 43, 0.7);
   padding-bottom: 30px;
 }
-.main-cover .main .section-title p {
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .main-cover .main .od-2 .section-title h4 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main-cover .main .od-2 .section-title h4 {
+    font-size: 20px;
+    line-height: 29px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-2 .section-title h4 {
+    font-size: 17px;
+    line-height: 21px;
+    padding-bottom: 10px;
+  }
+}
+.main-cover .main .od-2 .section-title p {
   font-family: var(--font-gilroy500);
   font-size: 20px;
   line-height: 23px;
   color: rgba(25, 32, 43, 0.7);
   max-width: 803px;
 }
-.main-cover .main .main-img {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-2 .section-title p {
+    max-width: 603px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .main-cover .main .od-1 {
+    order: 1;
+  }
+}
+.main-cover .main .od-1 .main-img {
   position: relative;
 }
-.main-cover .main .main-img .shape {
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .main-cover .main .od-1 .main-img img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1399px) {
+  .main-cover .main .od-1 .main-img img {
+    max-width: 100%;
+  }
+}
+.main-cover .main .od-1 .main-img .shape {
   position: absolute;
   top: -261px;
   left: -75px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .main-cover .main .od-1 .main-img .shape {
+    top: -145px;
+    left: -40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-cover .main .od-1 .main-img .shape {
+    top: -126px;
+    left: -40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-cover .main .od-1 .main-img .shape {
+    top: -525px;
+    left: -189px;
+  }
 }
 
 .service-section {
@@ -964,7 +1063,7 @@ i.bx {
   margin-top: 35px;
 }
 .service-section .service-content .contact .contact-inner {
-  max-width: 50%;
+  max-width: 38%;
 }
 .service-section .service-content .contact .contact-inner h3 {
   font-family: var(--font-gilroy700);
@@ -977,7 +1076,7 @@ i.bx {
   box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
   border-radius: 43.5px;
   background-color: #fff;
-  padding: 10px 60px;
+  padding: 19px 82px;
   display: inline-block;
   font-family: var(--font-gilroy600);
   font-size: 25px;
@@ -1001,21 +1100,21 @@ i.bx {
   margin: 0 15px;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area {
-  padding: 25px;
+  padding: 26px;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area p {
   font-family: var(--font-gilroy500);
-  font-size: 27px;
+  font-size: 30px;
   line-height: 34px;
   color: #000000;
-  padding: 20px 40px;
+  padding: 45px 155px;
   text-align: center;
   background-color: #FAFCFF;
   border-radius: 57px;
   margin: 0;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
-  padding: 80px;
+  padding: 75px 145px 164px 145px;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item {
   margin-bottom: 15px;
@@ -1054,8 +1153,11 @@ i.bx {
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p span {
   color: #19202B;
 }
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-button:not(.collapsed) {
+  background-color: transparent;
+}
 .why-choose-us-section .why-choose-us .why-chooce-us-bottom {
-  padding: 40px 0;
+  padding: 63px 0;
 }
 .why-choose-us-section .why-choose-us .why-chooce-us-bottom h3 {
   font-family: var(--font-gilroy600);
@@ -1068,7 +1170,7 @@ i.bx {
   background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
   box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
   border-radius: 37px;
-  padding: 20px 83px;
+  padding: 19px 82px;
   display: inline-block;
   font-family: var(--font-gilroy600);
   font-size: 25px;
@@ -1136,6 +1238,11 @@ i.bx {
 }
 .expertice-section .expertice-img {
   position: relative;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .expertice-section .expertice-img img {
+    max-height: 400px;
+  }
 }
 .expertice-section .expertice-img::before {
   content: "";

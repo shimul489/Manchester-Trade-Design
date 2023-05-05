@@ -169,13 +169,18 @@ img {
     }
 }
 
-// xl-device=====
+// xxl-device=====
+@mixin eighteen-down-device {
+    @media (min-width:1400px) and (max-width:1880px) {
+        @content;
+    }
+}
 @mixin seventeen-down-device {
     @media (max-width: 1700px) {
-      @content;
+        @content;
     }
-  }
-  
+}
+
 @mixin fifteen-down-device {
     @media (max-width:1500px) {
         @content;
@@ -188,6 +193,7 @@ img {
     }
 }
 
+// xxl-device=====
 @mixin xl-down-device {
     @media (max-width:1199px) {
         @content;
@@ -256,6 +262,7 @@ img {
         @content;
     }
 }
+
 @mixin threefifty-down-device() {
     @media (max-width:350px) {
         @content;
@@ -330,6 +337,7 @@ i.bx {
         padding-top: 90px;
     }
 }
+
 .pb-150 {
     padding-bottom: 150px;
 
@@ -341,6 +349,7 @@ i.bx {
         padding-bottom: 90px;
     }
 }
+
 .pt-120 {
     padding-top: 120px;
 
@@ -442,11 +451,12 @@ i.bx {
         line-height: 24px;
         padding-top: 20px;
         margin-bottom: 0;
-        &:first-child{
+
+        &:first-child {
             padding-top: 0;
         }
     }
-    
+
 }
 
 .section-title {
@@ -457,15 +467,23 @@ i.bx {
         color: var(--title-color1);
         text-transform: capitalize;
         margin-bottom: 20px;
-        @include lg-device(){
+        @include eighteen-down-device(){
+            font-size: 58px;
+            line-height: 68px;
+        }
+        @include xl-device(){
+            font-size: 50px;
+            line-height: 60px;
+        }
+        @include lg-device() {
             font-size: 41px;
-            
+            line-height: 51px;
         }
-        @include md-device(){
+
+        @include md-device() {
             font-size: 42px;
-            
         }
-        
+
         span {
             color: var(--primary-color1);
             position: relative;
@@ -486,7 +504,7 @@ i.bx {
             }
         }
 
-        
+
     }
 }
 
@@ -523,22 +541,25 @@ i.bx {
         @include xl-device() {
             padding: 40px 0px;
         }
+
         @include lg-device() {
             padding: 40px 0px;
         }
+
         // @include lg-down-device() {
         //     padding: 40px 0px;
         // }
         @include sm-down-device() {
             padding: 15px 10px;
         }
+
         // @include lg-device() {
         //     padding: 0px 10px;
         // }
 
         // @include lg-down-device() {
         //     padding: 20px 25px;
-            
+
         // }
         // @include sm-device() {
         //     padding: 0px 0px;
@@ -589,6 +610,7 @@ i.bx {
             @include lg-down-device() {
                 padding: 15px 0px;
             }
+
             // @include threefifty-device() {
             //     max-width: 125px;
             // }
@@ -600,6 +622,7 @@ i.bx {
                 @include lg-device() {
                     max-width: 80%;
                 }
+
                 @include sm-down-device() {
                     max-width: 80%;
                 }
@@ -966,12 +989,15 @@ i.bx {
                 position: absolute;
                 right: 41px;
                 top: 166px;
-                @include sm-device(){
+
+                @include sm-device() {
                     top: 158px;
                 }
-                @include sm-down-device(){
+
+                @include sm-down-device() {
                     top: 143px;
                 }
+
                 @media screen and (max-width:480px) {
                     top: 132px;
                 }
@@ -1063,20 +1089,24 @@ i.bx {
                     -moz-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
+
                     // background-color: -moz-linear-gradient(top, 125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
-                    @include sm-down-device(){
+                    @include sm-down-device() {
                         font-size: 15px;
                     }
                 }
-                @include sm-device(){
+
+                @include sm-device() {
                     margin: 5px;
                 }
-                @include sm-down-device(){
+
+                @include sm-down-device() {
                     margin: 5px;
                     height: 56px;
                     width: 56px;
                 }
-                @include sm-down-device(){
+
+                @include sm-down-device() {
                     height: 36px;
                     width: 36px;
                 }
@@ -1095,7 +1125,8 @@ i.bx {
                     @include sm-down-device() {
                         font-size: 13px;
                     }
-                    @include threefifty-down-device(){
+
+                    @include threefifty-down-device() {
                         font-size: 11px;
                     }
                 }
@@ -1116,10 +1147,11 @@ i.bx {
                         @include sm-down-device() {
                             font-size: 22px;
                         }
-                       @include threefifty-up-device(){
-                        font-size: 15px;
-                       }
-                    
+
+                        @include threefifty-up-device() {
+                            font-size: 15px;
+                        }
+
                     }
                 }
 
@@ -1130,14 +1162,17 @@ i.bx {
                 @include sm-device() {
                     padding: 0px 30px 0px 0px;
                 }
+
                 @include sm-down-device() {
                     padding: 0px 20px 0px 0px;
                 }
-                @include threefifty-up-device(){
+
+                @include threefifty-up-device() {
                     padding: 0px 5px 0px 0px;
-                   }
+                }
             }
-            @include sm-down-device(){
+
+            @include sm-down-device() {
                 padding: 8px;
             }
         }
@@ -1150,10 +1185,12 @@ i.bx {
         box-shadow: 0px 12px 60px rgba(0, 115, 236, 0.07);
         border-radius: 25px;
         padding: 42px 25px;
-        @include sm-down-device(){
-            padding:25px 15px;
+
+        @include sm-down-device() {
+            padding: 25px 15px;
             margin-top: 30px;
         }
+
         h3 {
             font-family: var(--font-gilroy700);
             font-size: 30px;
@@ -1168,6 +1205,10 @@ i.bx {
         padding-bottom: 30px;
         overflow: hidden;
 
+       .od-2{
+        @include lg-down-device(){
+            order: 2;
+        }
         .title-child {
 
             display: flex;
@@ -1175,6 +1216,11 @@ i.bx {
             align-items: center;
             gap: 30px;
             padding-bottom: 30px;
+            @include lg-device(){
+                gap: 10px;
+                padding-bottom: 10px;
+            }
+
             h6 {
                 font-family: var(--font-gilroy500);
                 font-size: 20px;
@@ -1186,9 +1232,20 @@ i.bx {
                     font-size: 20px;
                     line-height: 23px;
                     color: #0073EC;
+                    @include lg-device(){
+                        font-size: 17px;
+                        line-height: 20px;
+                    }
                 }
-                @include xl-device(){
-                    font-size: 16px;
+
+                @include eighteen-down-device(){
+                    font-size: 18px;
+                }
+                @include xl-device() {
+                    font-size: 15px;
+                }
+                @include lg-device() {
+                    font-size: 14px;
                 }
             }
         }
@@ -1200,6 +1257,19 @@ i.bx {
                 line-height: 29px;
                 color: rgba(25, 32, 43, 0.7);
                 padding-bottom: 30px;
+                @include eighteen-down-device(){
+                    font-size: 24px;
+                }
+                @include xl-device(){
+                    font-size: 20px;
+                    line-height: 29px;
+                    padding-bottom: 20px;
+                }
+                @include lg-device(){
+                    font-size: 17px;
+                    line-height: 21px;
+                    padding-bottom: 10px;
+                }
             }
 
             p {
@@ -1208,16 +1278,48 @@ i.bx {
                 line-height: 23px;
                 color: rgba(25, 32, 43, 0.7);
                 max-width: 803px;
+                @include lg-device(){
+                    max-width: 603px;
+                    font-size: 15px;
+                    line-height: 18px;
+                }
             }
         }
+       }
 
-        .main-img {
-            position: relative;
-
-            .shape {
-                position: absolute;
-                top: -261px;
-                left: -75px;
+        .od-1{
+            @include lg-down-device(){
+                order: 1;
+            }
+            .main-img {
+                position: relative;
+    
+                img {
+                    @include eighteen-down-device() {
+                        max-width: 100%;
+                    }
+                    @include xxl-down-device() {
+                        max-width: 100%;
+                    }
+                }
+    
+                .shape {
+                    position: absolute;
+                    top: -261px;
+                    left: -75px;
+                    @include xl-device(){
+                        top: -145px;
+                        left: -40px;
+                    }
+                    @include lg-device(){
+                        top: -126px;
+                        left: -40px;
+                    }
+                    @include md-device(){
+                        top: -525px;
+                        left: -189px;
+                    }
+                }
             }
         }
     }
@@ -1226,7 +1328,8 @@ i.bx {
 
 // service section start here =======!>
 .service-section {
-padding-top: 223px;
+    padding-top: 223px;
+
     .service-content {
         position: relative;
 
@@ -1246,9 +1349,9 @@ padding-top: 223px;
             border-radius: 35px;
             padding: 47px 38px;
             margin-top: 35px;
-            
+
             .contact-inner {
-                max-width: 50%;
+                max-width: 38%;
 
                 h3 {
                     font-family: var(--font-gilroy700);
@@ -1262,7 +1365,7 @@ padding-top: 223px;
                     box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
                     border-radius: 43.5px;
                     background-color: #fff;
-                    padding: 10px 60px;
+                    padding: 19px 82px;
                     display: inline-block;
                     font-family: var(--font-gilroy600);
                     font-size: 25px;
@@ -1281,44 +1384,45 @@ padding-top: 223px;
 /*================================================
 5. why choose us
 =================================================*/
-.why-choose-us-section{
+.why-choose-us-section {
     margin-top: 206px;
+
     .why-choose-us {
         background: rgba(0, 115, 236, 0.02);
         border-radius: 100px;
-    
+
         .accordion-wrapper {
             background: #FFFFFF;
             box-shadow: 0px 12px 60px rgba(0, 115, 236, 0.1);
             border-radius: 77px;
             margin: 0 15px;
-    
+
             .genarel-qustions-area {
-                padding: 25px;
-    
+                padding: 26px;
+
                 p {
                     font-family: var(--font-gilroy500);
-                    font-size: 27px;
+                    font-size: 30px;
                     line-height: 34px;
                     color: #000000;
-                    padding: 20px 40px;
+                    padding: 45px 155px;
                     text-align: center;
                     background-color: #FAFCFF;
                     border-radius: 57px;
                     margin: 0;
                 }
             }
-    
+
             .accordion {
-                padding: 80px;
-    
+                padding: 75px 145px 164px 145px;
+
                 .accordion-item {
                     margin-bottom: 15px;
                     background: #FFFFFF;
                     box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
                     border-radius: 20px;
                     border: none;
-    
+
                     .accordion-header {
                         .accordion-button {
                             padding: 12px 15px;
@@ -1327,23 +1431,23 @@ padding-top: 223px;
                             color: #000;
                             box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
                             border-radius: 20px;
-    
+
                             &:focus {
                                 box-shadow: none;
                                 background-color: #fff;
                                 color: #000;
-    
+
                             }
                         }
-    
+
                         .faq-icon {
                             margin-right: 20px;
                         }
                     }
-    
+
                     .accordion-body {
                         padding-top: 0;
-    
+
                         p {
                             font-family: var(--font-gilroy500);
                             font-size: 17px;
@@ -1351,19 +1455,27 @@ padding-top: 223px;
                             color: rgba(25, 32, 43, 0.6);
                             padding: 0 10px 16px 68px;
                             margin: 0;
-    
+
                             span {
                                 color: #19202B;
                             }
                         }
                     }
+
+                    .accordion-button:not(.collapsed) {
+                        background-color: transparent;
+                    }
+
+
                 }
             }
         }
-    
+
+
+
         .why-chooce-us-bottom {
-            padding: 40px 0;
-    
+            padding: 63px 0;
+
             h3 {
                 font-family: var(--font-gilroy600);
                 font-size: 35px;
@@ -1371,12 +1483,12 @@ padding-top: 223px;
                 text-transform: capitalize;
                 margin-bottom: 17px;
             }
-    
+
             span {
                 background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
                 box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
                 border-radius: 37px;
-                padding: 20px 83px;
+                padding: 19px 82px;
                 display: inline-block;
                 font-family: var(--font-gilroy600);
                 font-size: 25px;
@@ -1479,9 +1591,15 @@ padding-top: 223px;
 .expertice-section {
     background-color: #FAFCFF;
     padding-top: 95px;
-    .expertice-img {
 
+    .expertice-img {
         position: relative;
+
+        img {
+            @include xl-device() {
+                max-height: 400px;
+            }
+        }
 
         &::before {
             content: "";
