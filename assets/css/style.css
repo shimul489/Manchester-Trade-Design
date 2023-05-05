@@ -343,6 +343,18 @@ i.bx {
   width: 52px;
   height: 52px;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .faq-icon {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .faq-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
 
 @media screen and (min-width: 1920px) {
   .container {
@@ -785,6 +797,17 @@ i.bx {
   background: #FFFFFF;
   box-shadow: 30px 30px 50px rgba(0, 115, 236, 0.07);
   border-radius: 43.5px;
+  padding: 10px;
+  padding-right: 40px;
+  gap: 15px;
+}
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline {
+    padding: 5px;
+    padding-right: 20px;
+    gap: 10px;
+    min-width: 170px;
+  }
 }
 .main-cover header.header-area .hotline .hotline-icon {
   box-shadow: 0px 65px 65px rgba(0, 115, 236, 0.11);
@@ -795,7 +818,12 @@ i.bx {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 11px;
+}
+@media (max-width: 576px) {
+  .main-cover header.header-area .hotline .hotline-icon {
+    height: 36px;
+    width: 36px;
+  }
 }
 .main-cover header.header-area .hotline .hotline-icon i {
   font-size: 22px;
@@ -807,29 +835,8 @@ i.bx {
 }
 @media (max-width: 576px) {
   .main-cover header.header-area .hotline .hotline-icon i {
-    font-size: 15px;
+    font-size: 16px;
   }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-cover header.header-area .hotline .hotline-icon {
-    margin: 5px;
-  }
-}
-@media (max-width: 576px) {
-  .main-cover header.header-area .hotline .hotline-icon {
-    margin: 5px;
-    height: 56px;
-    width: 56px;
-  }
-}
-@media (max-width: 576px) {
-  .main-cover header.header-area .hotline .hotline-icon {
-    height: 36px;
-    width: 36px;
-  }
-}
-.main-cover header.header-area .hotline .hotline-info {
-  padding: 0px 65px 0px 0px;
 }
 .main-cover header.header-area .hotline .hotline-info span {
   font-family: var(--font-gilroy500);
@@ -840,12 +847,7 @@ i.bx {
 }
 @media (max-width: 576px) {
   .main-cover header.header-area .hotline .hotline-info span {
-    font-size: 13px;
-  }
-}
-@media (max-width: 350px) {
-  .main-cover header.header-area .hotline .hotline-info span {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 .main-cover header.header-area .hotline .hotline-info h6 {
@@ -857,39 +859,9 @@ i.bx {
   font-size: 25px;
   color: #040404;
 }
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-cover header.header-area .hotline .hotline-info h6 a {
-    font-size: 23px;
-  }
-}
 @media (max-width: 576px) {
   .main-cover header.header-area .hotline .hotline-info h6 a {
-    font-size: 21px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .main-cover header.header-area .hotline .hotline-info {
-    padding: 0px 30px 0px 0px;
-  }
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .main-cover header.header-area .hotline .hotline-info {
-    padding: 0px 30px 0px 0px;
-  }
-}
-@media (max-width: 576px) {
-  .main-cover header.header-area .hotline .hotline-info {
-    padding: 0px 20px 0px 0px;
-  }
-}
-@media (min-width: 423px) and (max-width: 480px) {
-  .main-cover header.header-area .hotline .hotline-info {
-    padding: 0px 30px 0px 0px;
-  }
-}
-@media (max-width: 576px) {
-  .main-cover header.header-area .hotline {
-    padding: 8px;
+    font-size: 16px;
   }
 }
 .main-cover .select-wapper {
@@ -1223,7 +1195,7 @@ i.bx {
 5. why choose us
 =================================================*/
 .why-choose-us-section {
-  margin-top: 206px;
+  margin-top: 200px;
 }
 @media (max-width: 991px) {
   .why-choose-us-section {
@@ -1255,22 +1227,81 @@ i.bx {
   border-radius: 77px;
   margin: 0 15px;
 }
-.why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area {
-  padding: 26px;
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section {
+  padding: 25px;
 }
-.why-choose-us-section .why-choose-us .accordion-wrapper .genarel-qustions-area p {
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area {
+  background-color: #FAFCFF;
+  border-radius: 57px;
+  padding: 45px 155px;
+}
+@media (max-width: 991px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area {
+    padding: 40px 110px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area {
+    padding: 30px 70px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area {
+    padding: 20px 50px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area {
+    padding: 12px 20px;
+  }
+}
+.why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area p {
   font-family: var(--font-gilroy500);
   font-size: 30px;
   line-height: 34px;
   color: #000000;
-  padding: 45px 155px;
   text-align: center;
-  background-color: #FAFCFF;
-  border-radius: 57px;
-  margin: 0;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area p {
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area p {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion-section .genarel-qustions-area p {
+    font-size: 18px;
+    line-height: 23px;
+  }
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
-  padding: 75px 145px 164px 145px;
+  padding: 75px 120px;
+}
+@media (max-width: 991px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
+    padding: 50px 75px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
+    padding: 20px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
+    padding: 18px 18px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion {
+    padding: 15px;
+  }
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item {
   margin-bottom: 15px;
@@ -1286,14 +1317,29 @@ i.bx {
   color: #000;
   box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
   border-radius: 20px;
+  gap: 20px;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button:focus {
   box-shadow: none;
   background-color: #fff;
   color: #000;
 }
-.why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .faq-icon {
-  margin-right: 20px;
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 576px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 13px;
+  }
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body {
   padding-top: 0;
@@ -1592,5 +1638,11 @@ footer .footer-bottom .copy-right p {
 @media only screen and (max-width: 528px) and (min-width: 320px) {
   footer .footer-bottom .copy-right p {
     font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .main-cover header.header-area .mobile-menu-btn {
+    top: 105px;
   }
 }/*# sourceMappingURL=style.css.map */

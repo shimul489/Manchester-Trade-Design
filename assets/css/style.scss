@@ -175,6 +175,7 @@ img {
         @content;
     }
 }
+
 @mixin seventeen-down-device {
     @media (max-width: 1700px) {
         @content;
@@ -262,7 +263,11 @@ img {
         @content;
     }
 }
-
+@mixin last-device(){
+    @media only screen and (max-width: 574px) and (min-width: 375px){
+        @content;
+    }
+}
 @mixin threefifty-down-device() {
     @media (max-width:350px) {
         @content;
@@ -467,14 +472,17 @@ i.bx {
         color: var(--title-color1);
         text-transform: capitalize;
         margin-bottom: 20px;
-        @include eighteen-down-device(){
+
+        @include eighteen-down-device() {
             font-size: 58px;
             line-height: 68px;
         }
-        @include xl-device(){
+
+        @include xl-device() {
             font-size: 50px;
             line-height: 60px;
         }
+
         @include lg-device() {
             font-size: 41px;
             line-height: 51px;
@@ -484,11 +492,13 @@ i.bx {
             font-size: 49px;
             line-height: 59px;
         }
+
         @include sm-device() {
             font-size: 37px;
             line-height: 47px;
         }
-        @include sm-down-device(){
+
+        @include sm-down-device() {
             font-size: 37px;
             line-height: 47px;
         }
@@ -523,6 +533,15 @@ i.bx {
     border-radius: 35px;
     width: 52px;
     height: 52px;
+    @include sm-device() {
+        width: 42px;
+    height: 42px;
+    }
+    @include last-device(){
+        width: 36px;
+    height: 36px;
+    }
+   
 }
 
 @media screen and (min-width: 1920px) {
@@ -1010,6 +1029,7 @@ i.bx {
                 @media screen and (max-width:480px) {
                     top: 132px;
                 }
+
                 @include fourtwenty-up-device() {
                     top: 108px;
                 }
@@ -1078,6 +1098,16 @@ i.bx {
             background: #FFFFFF;
             box-shadow: 30px 30px 50px rgba(0, 115, 236, 0.07);
             border-radius: 43.5px;
+            padding: 10px;
+            padding-right: 40px;
+            gap: 15px;
+
+            @include sm-down-device() {
+                padding: 5px;
+                padding-right: 20px;
+                gap: 10px;
+                min-width: 170px;
+            }
 
             // padding: 18px 40px 10px;
             .hotline-icon {
@@ -1090,7 +1120,11 @@ i.bx {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 11px;
+
+                @include sm-down-device() {
+                    height: 36px;
+                    width: 36px
+                }
 
                 i {
                     font-size: 22px;
@@ -1102,31 +1136,15 @@ i.bx {
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
 
-                    // background-color: -moz-linear-gradient(top, 125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
                     @include sm-down-device() {
-                        font-size: 15px;
+                        font-size: 16px;
                     }
                 }
 
-                @include sm-device() {
-                    margin: 5px;
-                }
 
-                @include sm-down-device() {
-                    margin: 5px;
-                    height: 56px;
-                    width: 56px;
-                }
-
-                @include sm-down-device() {
-                    height: 36px;
-                    width: 36px;
-                }
             }
 
             .hotline-info {
-                padding: 0px 65px 0px 0px;
-
                 span {
                     font-family: var(--font-gilroy500);
                     font-size: 15px;
@@ -1135,11 +1153,7 @@ i.bx {
                     padding-bottom: 2px;
 
                     @include sm-down-device() {
-                        font-size: 13px;
-                    }
-
-                    @include threefifty-down-device() {
-                        font-size: 11px;
+                        font-size: 10px;
                     }
                 }
 
@@ -1152,40 +1166,12 @@ i.bx {
                         font-size: 25px;
                         color: #040404;
 
-                        @include sm-device() {
-                            font-size: 23px;
-                        }
-
                         @include sm-down-device() {
-                            font-size: 21px;
+                            font-size: 16px;
                         }
-
-                        // @include threefifty-up-device() {
-                        //     font-size: 15px;
-                        // }
-
                     }
                 }
 
-                @include lg-device() {
-                    padding: 0px 30px 0px 0px;
-                }
-
-                @include sm-device() {
-                    padding: 0px 30px 0px 0px;
-                }
-
-                @include sm-down-device() {
-                    padding: 0px 20px 0px 0px;
-                }
-
-                @include fourtwenty-up-device() {
-                    padding: 0px 30px 0px 0px;
-                }
-            }
-
-            @include sm-down-device() {
-                padding: 8px;
             }
         }
 
@@ -1217,127 +1203,143 @@ i.bx {
         padding-bottom: 30px;
         overflow: hidden;
 
-       .od-2{
-        @include lg-down-device(){
-            order: 2;
-        }
-        .title-child {
-
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            gap: 30px;
-            padding-bottom: 30px;
-            @include lg-device(){
-                gap: 10px;
-                padding-bottom: 10px;
+        .od-2 {
+            @include lg-down-device() {
+                order: 2;
             }
-            @include sm-down-device(){
+
+            .title-child {
+
+                display: flex;
+                justify-content: start;
+                align-items: center;
                 gap: 30px;
-                align-items: flex-start;
-                padding-bottom: 20px;
-                flex-direction: column;
-            }
+                padding-bottom: 30px;
 
-            h6 {
-                font-family: var(--font-gilroy500);
-                font-size: 20px;
-                line-height: 23px;
-                color: #000;
+                @include lg-device() {
+                    gap: 10px;
+                    padding-bottom: 10px;
+                }
 
-                span {
-                    font-family: var(--font-gilroy700);
+                @include sm-down-device() {
+                    gap: 30px;
+                    align-items: flex-start;
+                    padding-bottom: 20px;
+                    flex-direction: column;
+                }
+
+                h6 {
+                    font-family: var(--font-gilroy500);
                     font-size: 20px;
                     line-height: 23px;
-                    color: #0073EC;
-                    @include lg-device(){
+                    color: #000;
+
+                    span {
+                        font-family: var(--font-gilroy700);
+                        font-size: 20px;
+                        line-height: 23px;
+                        color: #0073EC;
+
+                        @include lg-device() {
+                            font-size: 17px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    @include eighteen-down-device() {
+                        font-size: 18px;
+                    }
+
+                    @include xl-device() {
+                        font-size: 15px;
+                    }
+
+                    @include lg-device() {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .section-title {
+                h4 {
+                    font-family: var(--font-gilroy500);
+                    font-size: 25px;
+                    line-height: 29px;
+                    color: rgba(25, 32, 43, 0.7);
+                    padding-bottom: 30px;
+
+                    @include eighteen-down-device() {
+                        font-size: 24px;
+                    }
+
+                    @include xl-device() {
+                        font-size: 20px;
+                        line-height: 29px;
+                        padding-bottom: 20px;
+                    }
+
+                    @include lg-device() {
                         font-size: 17px;
-                        line-height: 20px;
+                        line-height: 21px;
+                        padding-bottom: 10px;
                     }
                 }
 
-                @include eighteen-down-device(){
-                    font-size: 18px;
-                }
-                @include xl-device() {
-                    font-size: 15px;
-                }
-                @include lg-device() {
-                    font-size: 14px;
-                }
-            }
-        }
-
-        .section-title {
-            h4 {
-                font-family: var(--font-gilroy500);
-                font-size: 25px;
-                line-height: 29px;
-                color: rgba(25, 32, 43, 0.7);
-                padding-bottom: 30px;
-                @include eighteen-down-device(){
-                    font-size: 24px;
-                }
-                @include xl-device(){
+                p {
+                    font-family: var(--font-gilroy500);
                     font-size: 20px;
-                    line-height: 29px;
-                    padding-bottom: 20px;
-                }
-                @include lg-device(){
-                    font-size: 17px;
-                    line-height: 21px;
-                    padding-bottom: 10px;
-                }
-            }
+                    line-height: 23px;
+                    color: rgba(25, 32, 43, 0.7);
+                    max-width: 803px;
 
-            p {
-                font-family: var(--font-gilroy500);
-                font-size: 20px;
-                line-height: 23px;
-                color: rgba(25, 32, 43, 0.7);
-                max-width: 803px;
-                @include lg-device(){
-                    max-width: 603px;
-                    font-size: 15px;
-                    line-height: 18px;
+                    @include lg-device() {
+                        max-width: 603px;
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
                 }
             }
         }
-       }
 
-        .od-1{
-            @include lg-down-device(){
+        .od-1 {
+            @include lg-down-device() {
                 order: 1;
             }
+
             .main-img {
                 position: relative;
-    
+
                 img {
                     @include eighteen-down-device() {
                         max-width: 100%;
                     }
+
                     @include xxl-down-device() {
                         max-width: 100%;
                     }
                 }
-    
+
                 .shape {
                     position: absolute;
                     top: -261px;
                     left: -75px;
-                    @include xl-device(){
+
+                    @include xl-device() {
                         top: -145px;
                         left: -40px;
                     }
-                    @include lg-device(){
+
+                    @include lg-device() {
                         top: -126px;
                         left: -40px;
                     }
-                    @include md-device(){
+
+                    @include md-device() {
                         top: -525px;
                         left: -189px;
                     }
-                    @include sm-down-device(){
+
+                    @include sm-down-device() {
                         top: -182px;
                         left: 16px;
                     }
@@ -1351,29 +1353,35 @@ i.bx {
 // service section start here =======!>
 .service-section {
     padding-top: 223px;
-    @include xxl-down-device(){
+
+    @include xxl-down-device() {
         padding-top: 150px;
     }
-    @include xl-down-device(){
+
+    @include xl-down-device() {
         padding-top: 80px;
     }
-    @include sm-down-device(){
+
+    @include sm-down-device() {
         padding-top: 40px;
     }
-    
- 
+
+
     .service-content {
         position: relative;
 
         .service-inner {
             max-width: 40%;
-            @include md-device(){
+
+            @include md-device() {
                 max-width: 100%;
             }
-            @include sm-device(){
+
+            @include sm-device() {
                 max-width: 100%;
             }
-            @include sm-down-device(){
+
+            @include sm-down-device() {
                 max-width: 100%;
             }
         }
@@ -1382,23 +1390,29 @@ i.bx {
             position: absolute;
             right: 0;
             bottom: 0;
-            @include sm-device(){
+
+            @include sm-device() {
                 right: 18px;
             }
-            @include sm-down-device(){
+
+            @include sm-down-device() {
                 right: 18px;
             }
-            img{
-                @include lg-down-device(){
+
+            img {
+                @include lg-down-device() {
                     height: 375px;
                 }
-                @include md-device(){
+
+                @include md-device() {
                     height: 300px;
                 }
-                @include sm-device(){
+
+                @include sm-device() {
                     height: 240px;
                 }
-                @include sm-down-device(){
+
+                @include sm-down-device() {
                     height: 240px;
                 }
             }
@@ -1410,21 +1424,26 @@ i.bx {
             border-radius: 35px;
             padding: 47px 38px;
             margin-top: 35px;
-            @include md-device(){
+
+            @include md-device() {
                 padding: 32px 25px;
                 margin-top: 80px;
             }
-            @include sm-device(){
-                
+
+            @include sm-device() {
+
                 margin-top: 50px;
                 padding: 28px 33px;
             }
+
             .contact-inner {
                 max-width: 38%;
-                @include md-device(){
+
+                @include md-device() {
                     max-width: 60%;
                 }
-                @include sm-device(){
+
+                @include sm-device() {
                     max-width: 50%;
                 }
 
@@ -1434,13 +1453,16 @@ i.bx {
                     color: #fff;
                     text-transform: capitalize;
                     margin-bottom: 17px;
-                    @include md-device(){
+
+                    @include md-device() {
                         font-size: 33px;
                     }
-                    @include sm-device(){
+
+                    @include sm-device() {
                         font-size: 19px;
                     }
-                    @include sm-down-device(){
+
+                    @include sm-down-device() {
                         font-size: 15px;
                     }
                 }
@@ -1454,14 +1476,17 @@ i.bx {
                     font-family: var(--font-gilroy600);
                     font-size: 25px;
                     color: #000;
-                    @include md-device(){
+
+                    @include md-device() {
                         padding: 12px 25px;
                     }
-                    @include sm-device(){
+
+                    @include sm-device() {
                         padding: 5px 10px;
                         font-size: 17px;
                     }
-                    @include sm-down-device(){
+
+                    @include sm-down-device() {
                         padding: 5px 10px;
                         font-size: 17px;
                     }
@@ -1480,17 +1505,21 @@ i.bx {
 5. why choose us
 =================================================*/
 .why-choose-us-section {
-    margin-top: 206px;
-    @include lg-down-device(){
+    margin-top: 200px;
+
+    @include lg-down-device() {
         margin-top: 106px;
     }
-    @include md-device(){
+
+    @include md-device() {
         margin-top: 106px;
     }
-    @include sm-device(){
+
+    @include sm-device() {
         margin-top: 90px;
     }
-    @include sm-device(){
+
+    @include sm-device() {
         margin-top: 50px;
     }
 
@@ -1504,24 +1533,65 @@ i.bx {
             border-radius: 77px;
             margin: 0 15px;
 
-            .genarel-qustions-area {
-                padding: 26px;
+            .accordion-section {
+                padding: 25px;
 
-                p {
-                    font-family: var(--font-gilroy500);
-                    font-size: 30px;
-                    line-height: 34px;
-                    color: #000000;
-                    padding: 45px 155px;
-                    text-align: center;
+                .genarel-qustions-area {
                     background-color: #FAFCFF;
                     border-radius: 57px;
-                    margin: 0;
+                    padding: 45px 155px;
+                    @include lg-down-device() {
+                        padding: 40px 110px;
+                    }
+                    @include md-device() {
+                        padding: 30px 70px;
+                    }
+                    @include sm-device() {
+                        padding: 20px 50px;
+                    }
+                    @include last-device() {
+                        padding: 12px 20px;
+                    }
+
+                    p {
+                        font-family: var(--font-gilroy500);
+                        font-size: 30px;
+                        line-height: 34px;
+                        color: #000000;
+                        text-align: center;
+                        @include sm-device() {
+                           font-size: 22px;
+                           line-height: 25px;
+                        }
+                        @include md-device() {
+                           font-size: 24px;
+                           line-height: 29px;
+                        }
+                        @include last-device() {
+                           font-size: 18px;
+                           line-height: 23px;
+                        }
+                    }
                 }
             }
 
+
             .accordion {
-                padding: 75px 145px 164px 145px;
+                padding: 75px 120px;
+
+                @include lg-down-device() {
+                    padding: 50px 75px;
+                }
+                @include sm-device() {
+                    padding: 20px 20px;
+                }
+                @include sm-down-device() {
+                    padding: 18px 18px;
+                }
+                @include last-device(){
+                    padding: 15px;
+                }
+                
 
                 .accordion-item {
                     margin-bottom: 15px;
@@ -1538,17 +1608,23 @@ i.bx {
                             color: #000;
                             box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
                             border-radius: 20px;
-
+                            gap: 20px;
                             &:focus {
                                 box-shadow: none;
                                 background-color: #fff;
                                 color: #000;
-
                             }
-                        }
-
-                        .faq-icon {
-                            margin-right: 20px;
+                            @include sm-device(){
+                                font-size: 16px;
+                                padding: 8px 10px;
+                            }
+                            @include sm-down-device(){
+                                font-size: 16px;
+                                padding: 6px 10px;
+                            }
+                            @media only screen and (max-width: 574px) and (min-width: 375px){
+                                font-size: 13px;
+                            }
                         }
                     }
 
@@ -1571,6 +1647,7 @@ i.bx {
 
                     .accordion-button:not(.collapsed) {
                         background-color: transparent;
+                        
                     }
 
 
@@ -1615,7 +1692,8 @@ i.bx {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        @include sm-device(){
+
+        @include sm-device() {
             display: flex;
             position: absolute;
             top: unset;
@@ -1623,7 +1701,8 @@ i.bx {
             justify-content: center;
             gap: 15px;
         }
-        @include sm-down-device(){
+
+        @include sm-down-device() {
             display: flex;
             position: absolute;
             top: unset;
@@ -1649,18 +1728,23 @@ i.bx {
                 margin-bottom: 55px;
                 z-index: 9;
                 transition: 0.35s;
-                @include lg-device(){
+
+                @include lg-device() {
                     padding: 50px 62px;
                 }
-                @include md-device(){
+
+                @include md-device() {
                     padding: 56px 81px;
                 }
-                @include sm-device(){
+
+                @include sm-device() {
                     padding: 24px 28px;
                 }
-                @include sm-down-device(){
+
+                @include sm-down-device() {
                     padding: 16px 31px;
                 }
+
                 .quat-icon {
                     position: absolute;
                     top: 50px;
@@ -1676,32 +1760,38 @@ i.bx {
                     text-align: center;
                     color: #000000;
                     max-width: 798px;
-                    @include xl-device(){
+
+                    @include xl-device() {
                         font-size: 30px;
-                    line-height: 37px;
+                        line-height: 37px;
                     }
-                    @include lg-device(){
+
+                    @include lg-device() {
                         font-size: 28px;
-                    line-height: 34px;
+                        line-height: 34px;
                     }
-                    @include lg-down-device(){
+
+                    @include lg-down-device() {
                         font-size: 32px;
-                    line-height: 39px;
+                        line-height: 39px;
                     }
-                    @include sm-down-device(){
+
+                    @include sm-down-device() {
                         font-size: 16px;
                         line-height: 20px;
-                        
+
                     }
-                    @include md-device(){
+
+                    @include md-device() {
                         font-size: 20px;
                         line-height: 30px;
-                    
+
                     }
-                    @include sm-device(){
+
+                    @include sm-device() {
                         font-size: 16px;
                         line-height: 20px;
-                    
+
                     }
                 }
             }
@@ -1754,9 +1844,11 @@ i.bx {
 .expertice-section {
     background-color: #FAFCFF;
     padding-top: 95px;
-@include sm-down-device(){
-    padding-top: 0;
-}
+
+    @include sm-down-device() {
+        padding-top: 0;
+    }
+
     .expertice-img {
         position: relative;
 
@@ -1929,3 +2021,8 @@ footer {
 //     font-size: 20px;
 //     margin-bottom: 1rem;
 // }
+@media only screen and (max-width: 576px) {
+    .main-cover header.header-area .mobile-menu-btn {
+        top: 105px;
+    }
+}

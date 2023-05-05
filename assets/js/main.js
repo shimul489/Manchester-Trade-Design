@@ -3,19 +3,16 @@
  // niceSelect
  $('select').niceSelect();
 
-// mobile-drop-down
-$(".main-nav .bi").on('click', function (event) {
-  var $fl = $(this);
-  $(this).parent().siblings().find('.sub-menu').slideUp();
-  $(this).parent().siblings().find('.bi').addClass('bi-chevron-down');
-  if ($fl.hasClass('bi-chevron-down')) {
-      $fl.removeClass('bi-chevron-down').addClass('bi-chevron-up');
-  } else {
-      $fl.removeClass('bi-chevron-up').addClass('bi-chevron-down');
-  }
-  $fl.next(".sub-menu").slideToggle();
-});
+var lgDownWidth = $(window).width();
+if ( lgDownWidth <= 991 ) {
+  // mobile-drop-down
+  $(".main-nav .bx").on('click', function (event) {
+    var $fl = $(this);
+    $(this).parent().siblings().find('.sub-menu').slideUp();
+    $fl.next(".sub-menu").slideToggle();
+  });
 
+}
 
 // Home Two testimonial Slider
 var swiper = new Swiper(".h1-testimonial-slider", {
