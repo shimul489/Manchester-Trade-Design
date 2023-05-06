@@ -1219,7 +1219,7 @@ i.bx {
     font-size: 20px;
   }
 }
-.service-section .service-content .contact .contact-inner span {
+.service-section .service-content .contact .contact-inner a {
   box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
   border-radius: 43.5px;
   background-color: #fff;
@@ -1230,18 +1230,18 @@ i.bx {
   color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .contact .contact-inner span {
+  .service-section .service-content .contact .contact-inner a {
     padding: 12px 25px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .contact .contact-inner span {
+  .service-section .service-content .contact .contact-inner a {
     padding: 5px 10px;
     font-size: 17px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .contact .contact-inner span {
+  .service-section .service-content .contact .contact-inner a {
     padding: 5px 10px;
     font-size: 17px;
   }
@@ -1440,7 +1440,7 @@ i.bx {
   text-transform: capitalize;
   margin-bottom: 17px;
 }
-.why-choose-us-section .why-choose-us .why-chooce-us-bottom span {
+.why-choose-us-section .why-choose-us .why-chooce-us-bottom a {
   background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
   box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
   border-radius: 37px;
