@@ -14,6 +14,8 @@ if ( lgDownWidth <= 991 ) {
 
 }
 
+new WOW().init();
+
 // Home Two testimonial Slider
 var swiper = new Swiper(".h1-testimonial-slider", {
   spaceBetween: 24,
