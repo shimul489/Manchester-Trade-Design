@@ -263,11 +263,13 @@ img {
         @content;
     }
 }
-@mixin last-device(){
-    @media only screen and (max-width: 574px) and (min-width: 375px){
+
+@mixin last-device() {
+    @media only screen and (max-width: 574px) and (min-width: 375px) {
         @content;
     }
 }
+
 @mixin threefifty-down-device() {
     @media (max-width:350px) {
         @content;
@@ -533,15 +535,17 @@ i.bx {
     border-radius: 35px;
     width: 52px;
     height: 52px;
+
     @include sm-device() {
         width: 42px;
-    height: 42px;
+        height: 42px;
     }
-    @include last-device(){
+
+    @include last-device() {
         width: 36px;
-    height: 36px;
+        height: 36px;
     }
-   
+
 }
 
 @media screen and (min-width: 1920px) {
@@ -1540,15 +1544,19 @@ i.bx {
                     background-color: #FAFCFF;
                     border-radius: 57px;
                     padding: 45px 155px;
+
                     @include lg-down-device() {
                         padding: 40px 110px;
                     }
+
                     @include md-device() {
                         padding: 30px 70px;
                     }
+
                     @include sm-device() {
                         padding: 20px 50px;
                     }
+
                     @include last-device() {
                         padding: 12px 20px;
                     }
@@ -1559,17 +1567,20 @@ i.bx {
                         line-height: 34px;
                         color: #000000;
                         text-align: center;
+
                         @include sm-device() {
-                           font-size: 22px;
-                           line-height: 25px;
+                            font-size: 22px;
+                            line-height: 25px;
                         }
+
                         @include md-device() {
-                           font-size: 24px;
-                           line-height: 29px;
+                            font-size: 24px;
+                            line-height: 29px;
                         }
+
                         @include last-device() {
-                           font-size: 18px;
-                           line-height: 23px;
+                            font-size: 18px;
+                            line-height: 23px;
                         }
                     }
                 }
@@ -1582,16 +1593,19 @@ i.bx {
                 @include lg-down-device() {
                     padding: 50px 75px;
                 }
+
                 @include sm-device() {
                     padding: 20px 20px;
                 }
+
                 @include sm-down-device() {
                     padding: 18px 18px;
                 }
-                @include last-device(){
+
+                @include last-device() {
                     padding: 15px;
                 }
-                
+
 
                 .accordion-item {
                     margin-bottom: 15px;
@@ -1609,20 +1623,24 @@ i.bx {
                             box-shadow: 0px 50px 60px rgba(0, 115, 236, 0.04);
                             border-radius: 20px;
                             gap: 20px;
+
                             &:focus {
                                 box-shadow: none;
                                 background-color: #fff;
                                 color: #000;
                             }
-                            @include sm-device(){
+
+                            @include sm-device() {
                                 font-size: 16px;
                                 padding: 8px 10px;
                             }
-                            @include sm-down-device(){
+
+                            @include sm-down-device() {
                                 font-size: 16px;
                                 padding: 6px 10px;
                             }
-                            @media only screen and (max-width: 574px) and (min-width: 375px){
+
+                            @media only screen and (max-width: 574px) and (min-width: 375px) {
                                 font-size: 13px;
                             }
                         }
@@ -1647,9 +1665,20 @@ i.bx {
 
                     .accordion-button:not(.collapsed) {
                         background-color: transparent;
-                        
+                        border: 0.6px solid #0073EC;
+                        border-bottom: none;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+
                     }
 
+                    .accordion-collapse.collapse.show {
+                        border: 0.6px solid #0073EC;
+                        border-top: none;
+                        border-radius: 20px;
+                        border-top-right-radius: 0;
+                        border-top-left-radius: 0;
+                    }
 
                 }
             }

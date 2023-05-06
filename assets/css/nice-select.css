@@ -35,19 +35,19 @@ span.current {
 .nice-select:active,
 .nice-select.open,
 .nice-select:focus {
-  border-color: #999;
+  border-color: #dbdbdb;
 }
 
 .nice-select:after {
-  border-bottom: 2px solid #999;
-  border-right: 2px solid #999;
+  border-bottom: 2px solid  #C2C2C2;
+  border-right: 2px solid  #C2C2C2;
   content: '';
   display: block;
-  height: 5px;
+  height: 10px;
   margin-top: -4px;
   pointer-events: none;
   position: absolute;
-  right: 12px;
+  right: 15px;
   top: 50%;
   -webkit-transform-origin: 66% 66%;
   -ms-transform-origin: 66% 66%;
@@ -57,9 +57,12 @@ span.current {
   transform: rotate(45deg);
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
-  width: 5px;
+  width: 10px;
 }
-
+.nice-select:focus::after{
+  border-bottom: 2px solid  #EF2700;
+  border-right: 2px solid  #EF2700;
+}
 .nice-select.open:after {
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
@@ -73,6 +76,7 @@ span.current {
   -webkit-transform: scale(1) translateY(0);
   -ms-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
+  /* border: 1px solid red; */
 }
 
 .nice-select.disabled {
@@ -161,7 +165,6 @@ span.current {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   background: #FFFFFF;
-border: 1px solid #EFEFEF;
 border-radius: 10px;
 margin-bottom: 15px;
 padding: 8px 15px;
