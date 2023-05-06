@@ -1621,6 +1621,16 @@ footer {
   margin: 25px;
   padding-bottom: 1px;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  footer .footer-logo {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  footer .footer-logo {
+    margin-left: 25px;
+  }
+}
 footer .footer-top .footer-item .footer-social ul {
   margin: 0;
   padding: 0;
@@ -1682,12 +1692,12 @@ footer .footer-top .footer-item .footer-list li a:hover {
 }
 @media (min-width: 576px) and (max-width: 768px) {
   footer .footer-top {
-    padding: 60px 0;
+    padding: 60px 30px;
   }
 }
 @media (max-width: 576px) {
   footer .footer-top {
-    padding: 60px 0;
+    padding: 60px 25px;
   }
 }
 footer .footer-bottom {

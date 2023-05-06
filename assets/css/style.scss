@@ -1920,7 +1920,14 @@ footer {
     border-radius: 30px;
     margin: 25px;
     padding-bottom: 1px;
-
+.footer-logo{
+    @include sm-device(){
+        margin-left: 30px;
+    }
+    @include last-device(){
+        margin-left: 25px;
+    }
+}
     .footer-top {
         .footer-item {
             .footer-social {
@@ -2005,11 +2012,11 @@ footer {
 
 
         @include sm-device() {
-            padding: 60px 0;
+            padding: 60px 30px;
         }
 
         @include sm-down-device() {
-            padding: 60px 0;
+            padding: 60px 25px;
         }
 
         // @include threefifty-down-device() {
