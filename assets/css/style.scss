@@ -1511,8 +1511,8 @@ i.bx {
                         padding: 12px 25px;
                     }
 
-                    @include sm-device() {
-                        padding: 5px 10px;
+                    @include sm-down-device() {
+                        padding: 8px 14px;
                         font-size: 17px;
                     }
 
