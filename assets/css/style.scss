@@ -717,6 +717,11 @@ i.bx {
                         top: 50%;
                         right: -25px;
                         transform: translate(0, -50%);
+                        @include lg-down-device(){
+                            // top: 10%;
+                            // left: 90px;
+                            // transform: translate(0, -50%);
+                        }
                     }
 
                     ul.sub-menu {
@@ -761,7 +766,7 @@ i.bx {
                                     margin-left: 10px;
                                 }
                                 @include lg-down-device(){
-
+                                    color: #696969;
                                 }
                             }
 

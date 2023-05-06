@@ -550,6 +550,11 @@ i.bx {
   color: var(--primary-color1);
   margin-left: 10px;
 }
+@media (max-width: 991px) {
+  .main-cover header.header-area .main-nav > ul li ul.sub-menu > li a {
+    color: #696969;
+  }
+}
 .main-cover header.header-area .main-nav > ul li ul.sub-menu > li a.active {
   color: var(--primary-color1);
 }
