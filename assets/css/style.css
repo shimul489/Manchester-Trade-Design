@@ -1240,10 +1240,10 @@ i.bx {
     font-size: 17px;
   }
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) and (max-width: 768px) {
   .service-section .service-content .contact .contact-inner a {
-    padding: 5px 10px;
-    font-size: 17px;
+    padding: 15px 40px;
+    font-size: 20px;
   }
 }
 
@@ -1413,6 +1413,11 @@ i.bx {
   padding: 0 10px 16px 68px;
   margin: 0;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p {
+    padding: 0 10px;
+  }
+}
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p span {
   color: #19202B;
 }
@@ -1433,6 +1438,11 @@ i.bx {
 .why-choose-us-section .why-choose-us .why-chooce-us-bottom {
   padding: 63px 0;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .why-chooce-us-bottom {
+    padding: 45px 0;
+  }
+}
 .why-choose-us-section .why-choose-us .why-chooce-us-bottom h3 {
   font-family: var(--font-gilroy600);
   font-size: 35px;
@@ -1449,6 +1459,12 @@ i.bx {
   font-family: var(--font-gilroy600);
   font-size: 25px;
   color: white;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .why-choose-us-section .why-choose-us .why-chooce-us-bottom a {
+    font-size: 20px;
+    padding: 15px 40px;
+  }
 }
 
 /*=======================================

@@ -1492,9 +1492,9 @@ i.bx {
                         font-size: 17px;
                     }
 
-                    @include sm-down-device() {
-                        padding: 5px 10px;
-                        font-size: 17px;
+                    @include sm-device() {
+                        padding: 15px 40px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -1660,7 +1660,9 @@ i.bx {
                             color: rgba(25, 32, 43, 0.6);
                             padding: 0 10px 16px 68px;
                             margin: 0;
-
+                            @include sm-device(){
+                                padding: 0 10px;
+                            }
                             span {
                                 color: #19202B;
                             }
@@ -1692,7 +1694,9 @@ i.bx {
 
         .why-chooce-us-bottom {
             padding: 63px 0;
-
+@include sm-device(){
+    padding: 45px 0;
+}
             h3 {
                 font-family: var(--font-gilroy600);
                 font-size: 35px;
@@ -1710,6 +1714,10 @@ i.bx {
                 font-family: var(--font-gilroy600);
                 font-size: 25px;
                 color: #ffff;
+                @include sm-device(){
+                    font-size: 20px;
+                    padding: 15px 40px;
+                }
             }
         }
     }

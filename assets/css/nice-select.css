@@ -166,7 +166,6 @@ span.current {
   transition: all 0.2s;
   background: #FFFFFF;
 border-radius: 10px;
-margin-bottom: 15px;
 padding: 8px 15px;
 }
 .nice-select .list :last-child{
