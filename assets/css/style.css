@@ -1154,6 +1154,11 @@ i.bx {
     height: 220px;
   }
 }
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .service-section .service-content .service-img img {
+    height: 200px;
+  }
+}
 .service-section .service-content .contact {
   background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
   box-shadow: 0px 50px 80px rgba(0, 115, 236, 0.08);

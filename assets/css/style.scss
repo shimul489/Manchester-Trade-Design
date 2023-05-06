@@ -1424,6 +1424,9 @@ i.bx {
                 @include sm-down-device() {
                     height: 220px;
                 }
+                @include last-device() {
+                    height: 200px;
+                }
             }
         }
 
