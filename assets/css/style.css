@@ -645,7 +645,6 @@ i.bx {
     font-family: var(--font-gilroy500);
     font-size: 17px;
     line-height: 20px;
-    text-align: center;
     color: #696969;
   }
   .main-cover header.header-area .main-nav ul li a::after {
