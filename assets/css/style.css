@@ -14,7 +14,7 @@ Template Name: Spinner - Startup and Digital Agency HTML Template
   --primary-color1: #0073EC;
   --title-color1: #000000;
   --text-color1: rgba(25, 32, 43, 0.7);
-  --white:#fff;
+  --white: #fff;
   --font-gilroy300: "Gilroy 300";
   --font-gilroy400: "Gilroy 400";
   --font-gilroy500: "Gilroy 500";
@@ -218,6 +218,21 @@ i.bx {
 
 .mb-120 {
   margin-bottom: 120px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mb-120 {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 991px) {
+  .mb-120 {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mb-120 {
+    margin-bottom: 60px;
+  }
 }
 
 .pt-80 {
@@ -1596,6 +1611,18 @@ i.bx {
 .h1-testimonial-area .slider-btn i {
   transition: 0.35s;
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .h1-testimonial-area .slider-btn {
+    height: 36px;
+    width: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .h1-testimonial-area .slider-btn {
+    height: 36px;
+    width: 36px;
+  }
+}
 
 /*=======================================
  6. expertice  Area start
@@ -1603,6 +1630,11 @@ i.bx {
 .expertice-section {
   background-color: #FAFCFF;
   padding-top: 95px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .expertice-section {
+    padding-top: 30px;
+  }
 }
 @media (max-width: 576px) {
   .expertice-section {
@@ -1636,11 +1668,6 @@ footer {
   border-radius: 30px;
   margin: 25px;
   padding-bottom: 1px;
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  footer .footer-logo {
-    margin-left: 30px;
-  }
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
   footer .footer-logo {

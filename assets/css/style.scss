@@ -16,7 +16,7 @@ Template Name: Spinner - Startup and Digital Agency HTML Template
     --primary-color1: #0073EC;
     --title-color1: #000000;
     --text-color1: rgba(25, 32, 43, 0.7);
-    --white:#fff;
+    --white: #fff;
     --font-gilroy300: 'Gilroy 300';
     --font-gilroy400: 'Gilroy 400';
     --font-gilroy500: 'Gilroy 500';
@@ -368,9 +368,11 @@ i.bx {
     @include lg-down-device() {
         padding-top: 80px;
     }
+
     @include md-device() {
         padding-top: 60px;
     }
+
     @include sm-device() {
         padding-top: 40px;
     }
@@ -386,12 +388,15 @@ i.bx {
     @include lg-down-device() {
         padding-bottom: 80px;
     }
+
     @include md-device() {
         padding-bottom: 60px;
     }
+
     @include sm-device() {
         padding-bottom: 40px;
     }
+
     @include last-device() {
         padding-bottom: 35px;
     }
@@ -399,6 +404,17 @@ i.bx {
 
 .mb-120 {
     margin-bottom: 120px;
+    @include lg-device() {
+        margin-bottom: 90px;
+    }
+
+    @include lg-down-device() {
+        margin-bottom: 80px;
+    }
+
+    @include md-device() {
+        margin-bottom: 60px;
+    }
 }
 
 .pt-80 {
@@ -593,6 +609,7 @@ i.bx {
         @include lg-device() {
             padding: 40px 0px;
         }
+
         @include sm-down-device() {
             padding: 30px 10px;
         }
@@ -733,7 +750,8 @@ i.bx {
                         top: 50%;
                         right: -25px;
                         transform: translate(0, -50%);
-                        @include lg-down-device(){
+
+                        @include lg-down-device() {
                             // top: 10%;
                             // left: 90px;
                             // transform: translate(0, -50%);
@@ -781,7 +799,8 @@ i.bx {
                                     color: var(--primary-color1);
                                     margin-left: 10px;
                                 }
-                                @include lg-down-device(){
+
+                                @include lg-down-device() {
                                     color: #696969;
                                 }
                             }
@@ -1425,10 +1444,12 @@ i.bx {
                 margin-top: 50px;
                 padding: 28px 33px;
             }
-            @include sm-down-device(){
+
+            @include sm-down-device() {
                 padding: 35px 26px;
             }
-            @include last-device(){
+
+            @include last-device() {
                 padding: 25px 15px;
                 margin-top: 60px;
             }
@@ -1443,10 +1464,12 @@ i.bx {
                 @include sm-device() {
                     max-width: 50%;
                 }
+
                 @include sm-down-device() {
                     max-width: 50%;
                 }
-                @include last-device(){
+
+                @include last-device() {
                     max-width: 60%;
                 }
 
@@ -1468,7 +1491,8 @@ i.bx {
                     @include sm-down-device() {
                         font-size: 18px;
                     }
-                    @include last-device(){
+
+                    @include last-device() {
                         font-size: 20px;
                     }
                 }
@@ -1532,9 +1556,11 @@ i.bx {
     .why-choose-us {
         background: rgba(0, 115, 236, 0.02);
         border-radius: 100px;
-@include last-device(){
-    padding-top: 40px;
-}
+
+        @include last-device() {
+            padding-top: 40px;
+        }
+
         .accordion-wrapper {
             background: #FFFFFF;
             box-shadow: 0px 12px 60px rgba(0, 115, 236, 0.1);
@@ -1660,9 +1686,11 @@ i.bx {
                             color: rgba(25, 32, 43, 0.6);
                             padding: 0 10px 16px 68px;
                             margin: 0;
-                            @include sm-device(){
+
+                            @include sm-device() {
                                 padding: 0 10px;
                             }
+
                             span {
                                 color: #19202B;
                             }
@@ -1694,9 +1722,11 @@ i.bx {
 
         .why-chooce-us-bottom {
             padding: 63px 0;
-@include sm-device(){
-    padding: 45px 0;
-}
+
+            @include sm-device() {
+                padding: 45px 0;
+            }
+
             h3 {
                 font-family: var(--font-gilroy600);
                 font-size: 35px;
@@ -1714,7 +1744,8 @@ i.bx {
                 font-family: var(--font-gilroy600);
                 font-size: 25px;
                 color: #ffff;
-                @include sm-device(){
+
+                @include sm-device() {
                     font-size: 20px;
                     padding: 15px 40px;
                 }
@@ -1857,26 +1888,15 @@ i.bx {
             transition: 0.35s;
         }
 
-        // &:hover {
-        //     background: var(--primary-color1);
-
-        //     i {
-        //         color: var(--white);
-        //     }
-        // }
+        @include sm-device() {
+            height: 36px;
+            width: 36px;
+        }
+        @include sm-down-device() {
+            height: 36px;
+            width: 36px;
+        }
     }
-
-    // .prev-btn-5{
-    //     position: absolute;
-    //     left: -30px;
-    //     top: 50%;
-    //     z-index: 1;
-    // }
-    // .next-btn-5{
-    //     position: absolute;
-    //     right: -30px;
-    //     top: 50%;
-    // }
 }
 
 /*=======================================
@@ -1886,6 +1906,9 @@ i.bx {
     background-color: #FAFCFF;
     padding-top: 95px;
 
+    @include sm-device() {
+        padding-top: 30px;
+    }
     @include sm-down-device() {
         padding-top: 0;
     }
@@ -1928,14 +1951,17 @@ footer {
     border-radius: 30px;
     margin: 25px;
     padding-bottom: 1px;
-.footer-logo{
-    @include sm-device(){
-        margin-left: 30px;
+
+    .footer-logo {
+        // @include sm-device() {
+        //     margin-left: 30px;
+        // }
+
+        @include last-device() {
+            margin-left: 25px;
+        }
     }
-    @include last-device(){
-        margin-left: 25px;
-    }
-}
+
     .footer-top {
         .footer-item {
             .footer-social {
