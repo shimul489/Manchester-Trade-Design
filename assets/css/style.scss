@@ -392,6 +392,9 @@ i.bx {
     @include sm-device() {
         padding-bottom: 40px;
     }
+    @include last-device() {
+        padding-bottom: 35px;
+    }
 }
 
 .mb-120 {
