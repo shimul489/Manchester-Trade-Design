@@ -1231,7 +1231,7 @@ i.bx {
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
   .service-section .service-content .contact .contact-inner h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 .service-section .service-content .contact .contact-inner a {
