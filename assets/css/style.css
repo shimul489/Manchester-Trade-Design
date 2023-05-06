@@ -1277,6 +1277,11 @@ i.bx {
   background: rgba(0, 115, 236, 0.02);
   border-radius: 100px;
 }
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .why-choose-us-section .why-choose-us {
+    padding-top: 40px;
+  }
+}
 .why-choose-us-section .why-choose-us .accordion-wrapper {
   background: #FFFFFF;
   box-shadow: 0px 12px 60px rgba(0, 115, 236, 0.1);
