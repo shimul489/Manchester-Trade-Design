@@ -1752,6 +1752,10 @@ i.bx {
                     font-size: 20px;
                     padding: 15px 40px;
                 }
+                @include sm-down-device() {
+                    font-size: 17px;
+                    padding: 8px 14px;
+                }
             }
         }
     }

@@ -1486,6 +1486,12 @@ i.bx {
     padding: 15px 40px;
   }
 }
+@media (max-width: 576px) {
+  .why-choose-us-section .why-choose-us .why-chooce-us-bottom a {
+    font-size: 17px;
+    padding: 8px 14px;
+  }
+}
 
 /*=======================================
  6. Home Two Testimonial Area
