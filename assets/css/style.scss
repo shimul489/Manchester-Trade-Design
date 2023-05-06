@@ -1687,7 +1687,7 @@ i.bx {
                             padding: 0 10px 16px 68px;
                             margin: 0;
 
-                            @include sm-device() {
+                            @include sm-down-device() {
                                 padding: 0 10px;
                             }
 
@@ -1953,10 +1953,6 @@ footer {
     padding-bottom: 1px;
 
     .footer-logo {
-        // @include sm-device() {
-        //     margin-left: 30px;
-        // }
-
         @include last-device() {
             margin-left: 25px;
         }

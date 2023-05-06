@@ -1428,7 +1428,7 @@ i.bx {
   padding: 0 10px 16px 68px;
   margin: 0;
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (max-width: 576px) {
   .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p {
     padding: 0 10px;
   }
