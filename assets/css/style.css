@@ -14,6 +14,7 @@ Template Name: Spinner - Startup and Digital Agency HTML Template
   --primary-color1: #0073EC;
   --title-color1: #000000;
   --text-color1: rgba(25, 32, 43, 0.7);
+  --white:#fff;
   --font-gilroy300: "Gilroy 300";
   --font-gilroy400: "Gilroy 400";
   --font-gilroy500: "Gilroy 500";
@@ -175,6 +176,16 @@ i.bx {
     padding-top: 80px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .pt-120 {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .pt-120 {
+    padding-top: 40px;
+  }
+}
 
 .pb-120 {
   padding-bottom: 120px;
@@ -187,6 +198,16 @@ i.bx {
 @media (max-width: 991px) {
   .pb-120 {
     padding-bottom: 80px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .pb-120 {
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .pb-120 {
+    padding-bottom: 40px;
   }
 }
 
@@ -1105,12 +1126,12 @@ i.bx {
 }
 @media (min-width: 576px) and (max-width: 768px) {
   .service-section .service-content .service-img img {
-    height: 240px;
+    height: 230px;
   }
 }
 @media (max-width: 576px) {
   .service-section .service-content .service-img img {
-    height: 240px;
+    height: 220px;
   }
 }
 .service-section .service-content .contact {
@@ -1132,6 +1153,17 @@ i.bx {
     padding: 28px 33px;
   }
 }
+@media (max-width: 576px) {
+  .service-section .service-content .contact {
+    padding: 35px 26px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .service-section .service-content .contact {
+    padding: 25px 15px;
+    margin-top: 60px;
+  }
+}
 .service-section .service-content .contact .contact-inner {
   max-width: 38%;
 }
@@ -1143,6 +1175,16 @@ i.bx {
 @media (min-width: 576px) and (max-width: 768px) {
   .service-section .service-content .contact .contact-inner {
     max-width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .service-section .service-content .contact .contact-inner {
+    max-width: 50%;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .service-section .service-content .contact .contact-inner {
+    max-width: 60%;
   }
 }
 .service-section .service-content .contact .contact-inner h3 {
@@ -1164,7 +1206,12 @@ i.bx {
 }
 @media (max-width: 576px) {
   .service-section .service-content .contact .contact-inner h3 {
-    font-size: 15px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 574px) and (min-width: 375px) {
+  .service-section .service-content .contact .contact-inner h3 {
+    font-size: 20px;
   }
 }
 .service-section .service-content .contact .contact-inner span {
@@ -1346,7 +1393,7 @@ i.bx {
   }
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body {
-  padding-top: 0;
+  border-top: none;
 }
 .why-choose-us-section .why-choose-us .accordion-wrapper .accordion .accordion-item .accordion-body p {
   font-family: var(--font-gilroy500);

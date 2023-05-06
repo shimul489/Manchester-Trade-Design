@@ -16,6 +16,7 @@ Template Name: Spinner - Startup and Digital Agency HTML Template
     --primary-color1: #0073EC;
     --title-color1: #000000;
     --text-color1: rgba(25, 32, 43, 0.7);
+    --white:#fff;
     --font-gilroy300: 'Gilroy 300';
     --font-gilroy400: 'Gilroy 400';
     --font-gilroy500: 'Gilroy 500';
@@ -367,6 +368,12 @@ i.bx {
     @include lg-down-device() {
         padding-top: 80px;
     }
+    @include md-device() {
+        padding-top: 60px;
+    }
+    @include sm-device() {
+        padding-top: 40px;
+    }
 }
 
 .pb-120 {
@@ -378,6 +385,12 @@ i.bx {
 
     @include lg-down-device() {
         padding-bottom: 80px;
+    }
+    @include md-device() {
+        padding-bottom: 60px;
+    }
+    @include sm-device() {
+        padding-bottom: 40px;
     }
 }
 
@@ -1383,11 +1396,11 @@ i.bx {
                 }
 
                 @include sm-device() {
-                    height: 240px;
+                    height: 230px;
                 }
 
                 @include sm-down-device() {
-                    height: 240px;
+                    height: 220px;
                 }
             }
         }
@@ -1409,6 +1422,13 @@ i.bx {
                 margin-top: 50px;
                 padding: 28px 33px;
             }
+            @include sm-down-device(){
+                padding: 35px 26px;
+            }
+            @include last-device(){
+                padding: 25px 15px;
+                margin-top: 60px;
+            }
 
             .contact-inner {
                 max-width: 38%;
@@ -1419,6 +1439,12 @@ i.bx {
 
                 @include sm-device() {
                     max-width: 50%;
+                }
+                @include sm-down-device() {
+                    max-width: 50%;
+                }
+                @include last-device(){
+                    max-width: 60%;
                 }
 
                 h3 {
@@ -1437,7 +1463,10 @@ i.bx {
                     }
 
                     @include sm-down-device() {
-                        font-size: 15px;
+                        font-size: 18px;
+                    }
+                    @include last-device(){
+                        font-size: 20px;
                     }
                 }
 
@@ -1617,7 +1646,7 @@ i.bx {
                     }
 
                     .accordion-body {
-                        padding-top: 0;
+                        border-top: none;
 
                         p {
                             font-family: var(--font-gilroy500);
