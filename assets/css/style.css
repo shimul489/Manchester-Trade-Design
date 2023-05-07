@@ -304,7 +304,7 @@ i.bx {
 
 .para p {
   font-family: var(--font-gilroy500);
-  font-size: 18px;
+  font-size: 20px;
   color: rgba(25, 32, 43, 0.6);
   line-height: 24px;
   padding-top: 20px;
@@ -533,9 +533,6 @@ i.bx {
 .main-cover header.header-area .main-nav > ul li:hover {
   color: var(--primary-color1);
 }
-.main-cover header.header-area .main-nav > ul li:hover i {
-  color: var(--primary-color1);
-}
 .main-cover header.header-area .main-nav > ul li a.active {
   color: #000;
   font-weight: 600;
@@ -545,7 +542,7 @@ i.bx {
 }
 .main-cover header.header-area .main-nav > ul li i {
   font-size: 22px;
-  color: #000;
+  color: var(--primary-color1);
   font-style: normal;
   position: absolute;
   top: 50%;
@@ -559,7 +556,8 @@ i.bx {
   opacity: 0;
   visibility: hidden;
   min-width: 215px;
-  background: #0B0F14;
+  background-color: var(--primary-color1);
+  border-radius: 10px;
   text-align: left;
   transition: all 0.5s ease-out 0s;
   transform: translateY(20px);
@@ -568,7 +566,7 @@ i.bx {
 .main-cover header.header-area .main-nav > ul li ul.sub-menu > li {
   padding: 0;
   display: block;
-  border-bottom: 1px solid rgba(56, 56, 56, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   position: relative;
 }
 .main-cover header.header-area .main-nav > ul li ul.sub-menu > li i {
@@ -581,14 +579,13 @@ i.bx {
   display: block;
   padding: 15px 15px;
   color: #fff;
-  font-weight: 300;
   text-transform: capitalize;
   font-size: 15px;
   line-height: 1;
   transition: all 0.4s ease-out 0s;
 }
 .main-cover header.header-area .main-nav > ul li ul.sub-menu > li a:hover {
-  color: var(--primary-color1);
+  color: #000;
   margin-left: 10px;
 }
 @media (max-width: 991px) {
@@ -604,7 +601,6 @@ i.bx {
   position: absolute;
   max-width: 230px;
   min-width: 215px;
-  background: #0B0F14;
   top: 0;
 }
 @media only screen and (max-width: 1199px) {
@@ -613,7 +609,6 @@ i.bx {
     position: unset;
     max-width: 230px;
     min-width: 215px;
-    background: #242424;
     top: 0;
   }
 }
@@ -726,9 +721,6 @@ i.bx {
     display: none;
     margin-top: 0 !important;
     transform: translateY(0px);
-  }
-  .main-cover header.header-area .main-nav ul li ul.sub-menu :hover {
-    background-color: red;
   }
   .main-cover header.header-area .main-nav ul li .bi {
     top: 8px;
@@ -1081,34 +1073,8 @@ i.bx {
 }
 
 .service-section {
-  padding-top: 223px;
-}
-@media (max-width: 1399px) {
-  .service-section {
-    padding-top: 150px;
-  }
-}
-@media (max-width: 1199px) {
-  .service-section {
-    padding-top: 80px;
-  }
-}
-@media (max-width: 576px) {
-  .service-section {
-    padding-top: 40px;
-  }
-}
-.service-section .service-content {
   position: relative;
 }
-.service-section .service-content .service-inner {
-  max-width: 40%;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .service-inner {
-    max-width: 100%;
-  }
-}
 @media (min-width: 576px) and (max-width: 768px) {
   .service-section .service-content .service-inner {
     max-width: 100%;
@@ -1117,102 +1083,89 @@ i.bx {
 @media (max-width: 576px) {
   .service-section .service-content .service-inner {
     max-width: 100%;
-  }
-}
-.service-section .service-content .service-img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-@media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .service-img {
-    right: 18px;
-  }
-}
-@media (max-width: 576px) {
-  .service-section .service-content .service-img {
-    right: 18px;
   }
 }
 @media (max-width: 991px) {
-  .service-section .service-content .service-img img {
+  .service-section .service-img img {
     height: 375px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .service-img img {
+  .service-section .service-img img {
     height: 300px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .service-img img {
+  .service-section .service-img img {
     height: 230px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .service-img img {
+  .service-section .service-img img {
     height: 220px;
   }
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
-  .service-section .service-content .service-img img {
+  .service-section .service-img img {
     height: 200px;
   }
 }
-.service-section .service-content .contact {
+.service-section .contact {
   background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
   box-shadow: 0px 50px 80px rgba(0, 115, 236, 0.08);
   border-radius: 35px;
   padding: 47px 38px;
   margin-top: 35px;
+  z-index: -1;
+  margin-top: -275px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .contact {
+  .service-section .contact {
     padding: 32px 25px;
     margin-top: 80px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .contact {
+  .service-section .contact {
     margin-top: 50px;
     padding: 28px 33px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .contact {
+  .service-section .contact {
     padding: 35px 26px;
   }
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
-  .service-section .service-content .contact {
+  .service-section .contact {
     padding: 25px 15px;
     margin-top: 60px;
   }
 }
-.service-section .service-content .contact .contact-inner {
-  max-width: 38%;
+.service-section .contact .contact-inner {
+  max-width: 49%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .contact .contact-inner {
+  .service-section .contact .contact-inner {
     max-width: 60%;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .contact .contact-inner {
+  .service-section .contact .contact-inner {
     max-width: 50%;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .contact .contact-inner {
+  .service-section .contact .contact-inner {
     max-width: 50%;
   }
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
-  .service-section .service-content .contact .contact-inner {
+  .service-section .contact .contact-inner {
     max-width: 60%;
   }
 }
-.service-section .service-content .contact .contact-inner h3 {
+.service-section .contact .contact-inner h3 {
   font-family: var(--font-gilroy700);
   font-size: 35px;
   color: #fff;
@@ -1220,26 +1173,26 @@ i.bx {
   margin-bottom: 17px;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .contact .contact-inner h3 {
+  .service-section .contact .contact-inner h3 {
     font-size: 33px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .contact .contact-inner h3 {
+  .service-section .contact .contact-inner h3 {
     font-size: 19px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .contact .contact-inner h3 {
+  .service-section .contact .contact-inner h3 {
     font-size: 18px;
   }
 }
 @media only screen and (max-width: 574px) and (min-width: 375px) {
-  .service-section .service-content .contact .contact-inner h3 {
+  .service-section .contact .contact-inner h3 {
     font-size: 15px;
   }
 }
-.service-section .service-content .contact .contact-inner a {
+.service-section .contact .contact-inner a {
   box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
   border-radius: 43.5px;
   background-color: #fff;
@@ -1250,18 +1203,18 @@ i.bx {
   color: #000;
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .service-section .service-content .contact .contact-inner a {
+  .service-section .contact .contact-inner a {
     padding: 12px 25px;
   }
 }
 @media (max-width: 576px) {
-  .service-section .service-content .contact .contact-inner a {
+  .service-section .contact .contact-inner a {
     padding: 8px 14px;
     font-size: 17px;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  .service-section .service-content .contact .contact-inner a {
+  .service-section .contact .contact-inner a {
     padding: 15px 40px;
     font-size: 20px;
   }

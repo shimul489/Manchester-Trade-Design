@@ -485,7 +485,7 @@ i.bx {
 .para {
     p {
         font-family: var(--font-gilroy500);
-        font-size: 18px;
+        font-size: 20px;
         color: rgba(25, 32, 43, 0.6);
         line-height: 24px;
         padding-top: 20px;
@@ -638,10 +638,6 @@ i.bx {
                 padding: 15px 0px;
             }
 
-            // @include threefifty-device() {
-            //     max-width: 125px;
-            // }
-
             img {
                 min-width: 120px;
                 max-width: 100%;
@@ -653,10 +649,6 @@ i.bx {
                 @include sm-down-device() {
                     max-width: 80%;
                 }
-
-                // @include sm-down-device() {
-                //     max-width: 100%;
-                // }
             }
         }
 
@@ -727,10 +719,6 @@ i.bx {
 
                     &:hover {
                         color: var(--primary-color1);
-
-                        i {
-                            color: var(--primary-color1);
-                        }
                     }
 
                     a.active {
@@ -744,18 +732,18 @@ i.bx {
 
                     i {
                         font-size: 22px;
-                        color: #000;
+                        color: var(--primary-color1);
                         font-style: normal;
                         position: absolute;
                         top: 50%;
                         right: -25px;
                         transform: translate(0, -50%);
 
-                        @include lg-down-device() {
-                            // top: 10%;
-                            // left: 90px;
-                            // transform: translate(0, -50%);
-                        }
+                        // @include lg-down-device() {
+                        //     top: 10%;
+                        //     left: 90px;
+                        //     transform: translate(0, -50%);
+                        // }
                     }
 
                     ul.sub-menu {
@@ -765,7 +753,8 @@ i.bx {
                         opacity: 0;
                         visibility: hidden;
                         min-width: 215px;
-                        background: #0B0F14;
+                        background-color: var(--primary-color1);
+                        border-radius: 10px;
                         text-align: left;
                         transition: all 0.5s ease-out 0s;
                         transform: translateY(20px);
@@ -781,14 +770,13 @@ i.bx {
 
                             padding: 0;
                             display: block;
-                            border-bottom: 1px solid rgba(#383838, 0.5);
+                            border-bottom: 1px solid rgba(#ffffff, 0.5);
                             position: relative;
 
                             a {
                                 display: block;
                                 padding: 15px 15px;
                                 color: #fff;
-                                font-weight: 300;
                                 text-transform: capitalize;
                                 font-size: 15px;
                                 line-height: 1;
@@ -796,7 +784,7 @@ i.bx {
                                 transition: all .4s ease-out 0s;
 
                                 &:hover {
-                                    color: var(--primary-color1);
+                                    color: #000;
                                     margin-left: 10px;
                                 }
 
@@ -814,7 +802,6 @@ i.bx {
                                 position: absolute;
                                 max-width: 230px;
                                 min-width: 215px;
-                                background: #0B0F14;
                                 top: 0;
 
                                 @media only screen and (max-width: 1199px) {
@@ -822,7 +809,6 @@ i.bx {
                                     position: unset;
                                     max-width: 230px;
                                     min-width: 215px;
-                                    background: #242424;
                                     top: 0;
                                 }
 
@@ -963,10 +949,6 @@ i.bx {
                             display: none;
                             margin-top: 0 !important;
                             transform: translateY(0px);
-
-                            :hover {
-                                background-color: red;
-                            }
                         }
 
                         .bi {
@@ -1030,11 +1012,6 @@ i.bx {
                 @include sm-device() {
                     top: 158px;
                 }
-
-                // @include sm-down-device() {
-                //     top: 108px;
-                // }
-
                 @media screen and (max-width:480px) {
                     top: 132px;
                 }
@@ -1361,30 +1338,10 @@ i.bx {
 
 // service section start here =======!>
 .service-section {
-    padding-top: 223px;
-
-    @include xxl-down-device() {
-        padding-top: 150px;
-    }
-
-    @include xl-down-device() {
-        padding-top: 80px;
-    }
-
-    @include sm-down-device() {
-        padding-top: 40px;
-    }
-
-
+    position: relative;
     .service-content {
-        position: relative;
 
         .service-inner {
-            max-width: 40%;
-
-            @include md-device() {
-                max-width: 100%;
-            }
 
             @include sm-device() {
                 max-width: 100%;
@@ -1394,142 +1351,138 @@ i.bx {
                 max-width: 100%;
             }
         }
+    }
 
-        .service-img {
-            position: absolute;
-            right: 0;
-            bottom: 0;
+    .service-img {
 
-            @include sm-device() {
-                right: 18px;
+        // @include sm-device() {
+        //     right: 18px;
+        // }
+
+        // @include sm-down-device() {
+        //     right: 18px;
+        // }
+
+        img {
+            @include lg-down-device() {
+                height: 375px;
             }
-
-            @include sm-down-device() {
-                right: 18px;
-            }
-
-            img {
-                @include lg-down-device() {
-                    height: 375px;
-                }
-
-                @include md-device() {
-                    height: 300px;
-                }
-
-                @include sm-device() {
-                    height: 230px;
-                }
-
-                @include sm-down-device() {
-                    height: 220px;
-                }
-                @include last-device() {
-                    height: 200px;
-                }
-            }
-        }
-
-        .contact {
-            background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
-            box-shadow: 0px 50px 80px rgba(0, 115, 236, 0.08);
-            border-radius: 35px;
-            padding: 47px 38px;
-            margin-top: 35px;
 
             @include md-device() {
-                padding: 32px 25px;
-                margin-top: 80px;
+                height: 300px;
             }
 
             @include sm-device() {
-
-                margin-top: 50px;
-                padding: 28px 33px;
+                height: 230px;
             }
 
             @include sm-down-device() {
-                padding: 35px 26px;
+                height: 220px;
+            }
+            @include last-device() {
+                height: 200px;
+            }
+        }
+    }
+    .contact {
+        background: linear-gradient(125.97deg, #0073EC 8.74%, #2E93FF 90.75%);
+        box-shadow: 0px 50px 80px rgba(0, 115, 236, 0.08);
+        border-radius: 35px;
+        padding: 47px 38px;
+        margin-top: 35px;
+        z-index: -1;
+        margin-top: -275px;
+
+        @include md-device() {
+            padding: 32px 25px;
+            margin-top: 80px;
+        }
+
+        @include sm-device() {
+
+            margin-top: 50px;
+            padding: 28px 33px;
+        }
+
+        @include sm-down-device() {
+            padding: 35px 26px;
+        }
+
+        @include last-device() {
+            padding: 25px 15px;
+            margin-top: 60px;
+        }
+
+        .contact-inner {
+            max-width: 49%;
+
+            @include md-device() {
+                max-width: 60%;
+            }
+
+            @include sm-device() {
+                max-width: 50%;
+            }
+
+            @include sm-down-device() {
+                max-width: 50%;
             }
 
             @include last-device() {
-                padding: 25px 15px;
-                margin-top: 60px;
+                max-width: 60%;
             }
 
-            .contact-inner {
-                max-width: 38%;
+            h3 {
+                font-family: var(--font-gilroy700);
+                font-size: 35px;
+                color: #fff;
+                text-transform: capitalize;
+                margin-bottom: 17px;
 
                 @include md-device() {
-                    max-width: 60%;
+                    font-size: 33px;
                 }
 
                 @include sm-device() {
-                    max-width: 50%;
+                    font-size: 19px;
                 }
 
                 @include sm-down-device() {
-                    max-width: 50%;
+                    font-size: 18px;
                 }
 
                 @include last-device() {
-                    max-width: 60%;
-                }
-
-                h3 {
-                    font-family: var(--font-gilroy700);
-                    font-size: 35px;
-                    color: #fff;
-                    text-transform: capitalize;
-                    margin-bottom: 17px;
-
-                    @include md-device() {
-                        font-size: 33px;
-                    }
-
-                    @include sm-device() {
-                        font-size: 19px;
-                    }
-
-                    @include sm-down-device() {
-                        font-size: 18px;
-                    }
-
-                    @include last-device() {
-                        font-size: 15px;
-                    }
-                }
-
-                a {
-                    box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
-                    border-radius: 43.5px;
-                    background-color: #fff;
-                    padding: 19px 82px;
-                    display: inline-block;
-                    font-family: var(--font-gilroy600);
-                    font-size: 25px;
-                    color: #000;
-
-                    @include md-device() {
-                        padding: 12px 25px;
-                    }
-
-                    @include sm-down-device() {
-                        padding: 8px 14px;
-                        font-size: 17px;
-                    }
-
-                    @include sm-device() {
-                        padding: 15px 40px;
-                        font-size: 20px;
-                    }
+                    font-size: 15px;
                 }
             }
 
+            a {
+                box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.1);
+                border-radius: 43.5px;
+                background-color: #fff;
+                padding: 19px 82px;
+                display: inline-block;
+                font-family: var(--font-gilroy600);
+                font-size: 25px;
+                color: #000;
+
+                @include md-device() {
+                    padding: 12px 25px;
+                }
+
+                @include sm-down-device() {
+                    padding: 8px 14px;
+                    font-size: 17px;
+                }
+
+                @include sm-device() {
+                    padding: 15px 40px;
+                    font-size: 20px;
+                }
+            }
         }
+
     }
-
-
 }
 
 // service section end here =======!>

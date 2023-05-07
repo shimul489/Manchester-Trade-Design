@@ -60,8 +60,8 @@ span.current {
   width: 10px;
 }
 .nice-select:focus::after{
-  border-bottom: 2px solid  #EF2700;
-  border-right: 2px solid  #EF2700;
+  border-bottom: 2px solid #0073EC;
+  border-right: 2px solid  #0073EC;
 }
 .nice-select.open:after {
   -webkit-transform: rotate(-135deg);
