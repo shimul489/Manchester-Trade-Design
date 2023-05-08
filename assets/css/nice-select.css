@@ -27,6 +27,9 @@ span.current {
   font-family: var(--font-gotham500); 
   color: var(--title-color1);
   font-size: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 .nice-select:hover {
   border-color: #dbdbdb;
