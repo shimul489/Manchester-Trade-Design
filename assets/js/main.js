@@ -21,7 +21,7 @@ var swiper = new Swiper(".h1-testimonial-slider", {
   spaceBetween: 24,
   slidesPerView: 1,
   loop: true,
-  speed:2000,
+  speed:1500,
   autoplay: {
     delay: 3000,
   },
