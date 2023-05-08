@@ -972,9 +972,13 @@ i.bx {
 .main-cover header.header-area .hotline:hover {
   background-color: var(--primary-color1);
 }
-.main-cover header.header-area .hotline:hover i {
+.main-cover header.header-area .hotline:hover .hotline-icon i {
+  font-size: 22px;
+  background: linear-gradient(to bottom, #ffffff 8.74%, #ffffff 90.75%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #fff;
 }
 .main-cover .select-wapper {
   background-color: #fff;

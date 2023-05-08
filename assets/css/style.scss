@@ -1359,9 +1359,15 @@ i.bx {
             &:hover {
                 background-color: var(--primary-color1)
             }
-            &:hover i{
-                -webkit-text-fill-color: transparent;
-                background-color: #fff;
+            &:hover .hotline-icon i{
+                font-size: 22px;
+                    background: -moz-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
+                    background: -webkit-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
+                    background: linear-gradient(to bottom, #ffffff 8.74%, #ffffff 90.75%);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
             }
         }
 
