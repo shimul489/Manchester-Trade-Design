@@ -1805,6 +1805,7 @@ i.bx {
   background-position: left;
   background-repeat: no-repeat;
 }
+
 /*=======================================
  15. footer area start here
 =======================================*/
@@ -1915,4 +1916,249 @@ footer .footer-bottom .copy-right p {
   .main-cover header.header-area .mobile-menu-btn {
     top: 105px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*================================================
+about page start here 
+=================================================*/
+.about-main {
+  padding-top: 65px;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .about-main .od-2 {
+    order: 2;
+  }
+}
+.about-main .od-2 .about-section-title h2 {
+  font-family: var(--font-gilroy700);
+  font-size: 70px;
+  line-height: 80px;
+  color: var(--title-color1);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 58px;
+    line-height: 68px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 41px;
+    line-height: 51px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 49px;
+    line-height: 59px;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 37px;
+    line-height: 47px;
+  }
+}
+@media (max-width: 576px) {
+  .about-main .od-2 .about-section-title h2 {
+    font-size: 37px;
+    line-height: 47px;
+  }
+}
+.about-main .od-2 .about-section-title h2 span {
+  color: var(--primary-color1);
+}
+.about-main .od-2 .about-section-title p {
+  font-family: var(--font-gilroy500);
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(25, 32, 43, 0.7);
+  max-width: 803px;
+}
+@media (max-width: 991px) {
+  .about-main .od-1 {
+    order: 1;
+  }
+}
+.about-main .od-1 .main-img {
+  position: relative;
+}
+@media (min-width: 1400px) and (max-width: 1880px) {
+  .about-main .od-1 .main-img img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1399px) {
+  .about-main .od-1 .main-img img {
+    max-width: 100%;
+  }
+}
+.about-main .od-1 .main-img .shape {
+  position: absolute;
+  top: -261px;
+  left: -75px;
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .about-main .od-1 .main-img .shape {
+    top: -145px;
+    left: -40px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .about-main .od-1 .main-img .shape {
+    top: -126px;
+    left: -40px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-main .od-1 .main-img .shape {
+    top: -525px;
+    left: -189px;
+  }
+}
+@media (max-width: 576px) {
+  .about-main .od-1 .main-img .shape {
+    top: -182px;
+    left: 16px;
+  }
+}
+
+.about-call-area .about-call .hotline-icon {
+  box-shadow: 0px 45px 65px rgba(0, 115, 236, 0.08);
+  border-radius: 60px;
+  background: rgba(255, 255, 255, 0.07);
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+@media (max-width: 576px) {
+  .about-call-area .about-call .hotline-icon {
+    height: 36px;
+    width: 36px;
+  }
+}
+.about-call-area .about-call .hotline-icon i {
+  font-size: 26px;
+  background: linear-gradient(to bottom, #0073EC 8.74%, #2E93FF 90.75%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 576px) {
+  .about-call-area .about-call .hotline-icon i {
+    font-size: 16px;
+  }
+}
+.about-call-area .about-call a {
+  background: #fff;
+  box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
+  border-radius: 37px;
+  padding: 19px 82px;
+  display: inline-block;
+  font-family: var(--font-gilroy600);
+  font-size: 25px;
+  color: #fff;
+}
+.about-call-area .about-call a:after, .about-call-area .about-call a:before {
+  background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
+}
+.about-call-area .about-call a:hover {
+  color: #000;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .about-call-area .about-call a {
+    font-size: 20px;
+    padding: 15px 40px;
+  }
+}
+@media (max-width: 576px) {
+  .about-call-area .about-call a {
+    font-size: 17px;
+    padding: 8px 14px;
+  }
+}
+.about-call-area .about-call h3 {
+  font-family: var(--font-gilroy700);
+  font-size: 35px;
+  line-height: 41px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+/*================================================
+contact page start here 
+=================================================*/
+.contact-main {
+  background: #d4c0c0;
+  box-shadow: 0px 50px 99px rgba(37, 141, 251, 0.08);
+  border-radius: 47px;
+}
+.contact-main .contact-info {
+  padding: 35px 25px;
+  background: #FAFCFF;
+  border-radius: 37px;
+  margin: 20px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-main .contact-info .phone, .contact-main .contact-info .location, .contact-main .contact-info .email {
+  background: #FFFFFF;
+  box-shadow: 0px 60px 60px rgba(0, 115, 236, 0.06);
+  border-radius: 20px;
+  gap: 15px;
+  padding: 20px;
+}
+.contact-main .contact-info .phone p, .contact-main .contact-info .location p, .contact-main .contact-info .email p {
+  max-width: 240px;
+}
+.contact-main .log-in-information {
+  padding: 55px;
+}
+.contact-main .log-in-information .container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.contact-main .log-in-information h2 {
+  text-align: center;
+}
+.contact-main .log-in-information .form-group {
+  margin-bottom: 20px;
+}
+.contact-main .log-in-information .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-main .log-in-information .form-group input {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.contact-main .log-in-information .form-group input[type=submit] {
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+.contact-main .log-in-information #message {
+  width: 100%;
+}
+
+/*================================================
+Services page start here 
+=================================================*//*# sourceMappingURL=style.css.map */

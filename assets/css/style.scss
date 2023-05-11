@@ -1278,9 +1278,7 @@ i.bx {
                 min-width: 170px;
             }
 
-            // padding: 18px 40px 10px;
             .hotline-icon {
-                // margin-right: 25px;
                 box-shadow: 0px 65px 65px rgba(0, 115, 236, 0.11);
                 border-radius: 60px;
                 background: rgba(255, 255, 255, 0.07);
@@ -1359,15 +1357,16 @@ i.bx {
             &:hover {
                 background-color: var(--primary-color1)
             }
-            &:hover .hotline-icon i{
+
+            &:hover .hotline-icon i {
                 font-size: 22px;
-                    background: -moz-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
-                    background: -webkit-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
-                    background: linear-gradient(to bottom, #ffffff 8.74%, #ffffff 90.75%);
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
+                background: -moz-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
+                background: -webkit-linear-gradient(top, #ffffff 8.74%, #ffffff 90.75%);
+                background: linear-gradient(to bottom, #ffffff 8.74%, #ffffff 90.75%);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
 
@@ -2200,13 +2199,6 @@ i.bx {
             background-repeat: no-repeat;
         }
     }
-
-    .map-img {
-        // img{
-        //     min-height: 966px;
-        //     max-width: 737px;
-        // }
-    }
 }
 
 /*=======================================
@@ -2361,4 +2353,270 @@ footer {
     .main-cover header.header-area .mobile-menu-btn {
         top: 105px;
     }
+}
+
+
+/*================================================
+about page start here 
+=================================================*/
+.about-main {
+    padding-top: 65px;
+    overflow: hidden;
+
+    .od-2 {
+        @include lg-down-device() {
+            order: 2;
+        }
+
+        .about-section-title {
+            h2 {
+                font-family: var(--font-gilroy700);
+                font-size: 70px;
+                line-height: 80px;
+                color: var(--title-color1);
+                text-transform: capitalize;
+                margin-bottom: 20px;
+
+                @include eighteen-down-device() {
+                    font-size: 58px;
+                    line-height: 68px;
+                }
+
+                @include xl-device() {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+
+                @include lg-device() {
+                    font-size: 41px;
+                    line-height: 51px;
+                }
+
+                @include md-device() {
+                    font-size: 49px;
+                    line-height: 59px;
+                }
+
+                @include sm-device() {
+                    font-size: 37px;
+                    line-height: 47px;
+                }
+
+                @include sm-down-device() {
+                    font-size: 37px;
+                    line-height: 47px;
+                }
+
+                span {
+                    color: var(--primary-color1);
+                }
+            }
+
+            p {
+                font-family: var(--font-gilroy500);
+                font-size: 20px;
+                line-height: 23px;
+                color: rgba(25, 32, 43, 0.7);
+                max-width: 803px;
+            }
+        }
+
+    }
+
+    .od-1 {
+        @include lg-down-device() {
+            order: 1;
+        }
+
+        .main-img {
+            position: relative;
+
+            img {
+                @include eighteen-down-device() {
+                    max-width: 100%;
+                }
+
+                @include xxl-down-device() {
+                    max-width: 100%;
+                }
+            }
+
+            .shape {
+                position: absolute;
+                top: -261px;
+                left: -75px;
+
+                @include xl-device() {
+                    top: -145px;
+                    left: -40px;
+                }
+
+                @include lg-device() {
+                    top: -126px;
+                    left: -40px;
+                }
+
+                @include md-device() {
+                    top: -525px;
+                    left: -189px;
+                }
+
+                @include sm-down-device() {
+                    top: -182px;
+                    left: 16px;
+                }
+            }
+        }
+    }
+}
+
+.about-call-area {
+    .about-call {
+        .hotline-icon {
+            box-shadow: 0px 45px 65px rgba(0, 115, 236, 0.08);
+            border-radius: 60px;
+            background: rgba(255, 255, 255, 0.07);
+            height: 80px;
+            width: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            margin-bottom: 40px;
+
+            @include sm-down-device() {
+                height: 36px;
+                width: 36px
+            }
+
+            i {
+                font-size: 26px;
+                background: -moz-linear-gradient(top, #0073EC 8.74%, #2E93FF 90.75%);
+                background: -webkit-linear-gradient(top, #0073EC 8.74%, #2E93FF 90.75%);
+                background: linear-gradient(to bottom, #0073EC 8.74%, #2E93FF 90.75%);
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                @include sm-down-device() {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        a {
+            background: #fff;
+            box-shadow: 0px 20px 35px rgba(0, 115, 236, 0.2);
+            border-radius: 37px;
+            padding: 19px 82px;
+            display: inline-block;
+            font-family: var(--font-gilroy600);
+            font-size: 25px;
+            color: #fff;
+
+            &:after,
+            &:before {
+                background: linear-gradient(117.83deg, #0073EC 20.63%, #2E93FF 86.23%);
+            }
+
+            &:hover {
+                color: #000;
+            }
+
+            @include sm-device() {
+                font-size: 20px;
+                padding: 15px 40px;
+            }
+
+            @include sm-down-device() {
+                font-size: 17px;
+                padding: 8px 14px;
+            }
+        }
+
+        h3 {
+            font-family: var(--font-gilroy700);
+            font-size: 35px;
+            line-height: 41px;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+/*================================================
+contact page start here 
+=================================================*/
+.contact-main{
+    background: #d4c0c0;
+    box-shadow: 0px 50px 99px rgba(37, 141, 251, 0.08);
+    border-radius: 47px;
+    .contact-info{
+        padding: 35px 25px;
+        background: #FAFCFF;
+border-radius: 37px;
+margin: 20px;
+gap: 15px;
+display: flex;
+flex-direction: column;
+
+.phone, .location, .email{
+    background: #FFFFFF;
+    box-shadow: 0px 60px 60px rgba(0, 115, 236, 0.06);
+    border-radius: 20px;
+    gap: 15px;
+    padding: 20px;
+    p{
+        max-width: 240px;
+    }
+}
+
+    }
+
+    .log-in-information{
+        padding: 55px;
+         .container {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      cursor: pointer;
+    }
+    #message{
+        width: 100%;
+    }
+    }
+}
+/*================================================
+Services page start here 
+=================================================*/
+.service-page{
+
 }
